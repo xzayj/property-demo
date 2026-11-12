@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>津田沼 物件マップ（開発中のデモ）</title>
+
+  <!-- MapLibre GL JS (CDN, キー不要) -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #1a237e;
+      color: #fff;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 1rem; font-weight: bold; }
+    header .demo-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #ffca28;
+      color: #1a237e;
+      font-size: 0.72rem;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+    header .subtitle {
+      font-size: 0.75rem;
+      color: #c5cae9;
+      margin-top: 2px;
+    }
+    #count {
+      font-size: 0.8rem;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    /* メインエリア */
+    main {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 地図 */
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 物件マーカー */
+    .property-marker {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .property-marker:hover { transform: scale(1.4); }
+
+    /* 駅マーカー */
+    .station-marker {
+      font-size: 22px;
+      cursor: pointer;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+    }
+
+    /* ポップアップ */
+    .maplibregl-popup-content {
+      border-radius: 8px;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      min-width: 210px;
+    }
+    .popup-content h3 {
+      background: #1a237e;
+      color: #fff;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+    }
+    .popup-content table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .popup-content th,
+    .popup-content td {
+      padding: 5px 10px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+    .popup-content th {
+      color: #666;
+      white-space: nowrap;
+      width: 40%;
+    }
+    .popup-content tr:last-child th,
+    .popup-content tr:last-child td { border-bottom: none; }
+
+    /* 凡例 */
+    #legend {
+      position: absolute;
+      bottom: 32px;
+      left: 12px;
+      background: rgba(255,255,255,0.93);
+      border-radius: 8px;
+      padding: 10px 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      font-size: 0.78rem;
+      z-index: 10;
+    }
+    #legend h4 { margin-bottom: 6px; color: #333; font-size: 0.8rem; }
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .legend-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    /* 取引種別の絞り込み */
+    #type-filter {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #ddd;
+    }
+    #type-filter label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 3px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* 背景地図の出典（地理院タイル）。下端の #data-note に重ならないよう上にずらし、前面に出す */
+    .maplibregl-ctrl-bottom-right {
+      bottom: 22px;
+      z-index: 11;
+    }
+
+    /* データ出典（不動産情報ライブラリAPI利用規約 第7条に基づく必須表示） */
+    #data-note {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      padding: 3px 10px;
+      font-size: 0.65rem;
+      line-height: 1.3;
+      z-index: 10;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>津田沼 物件マップ <span class="demo-badge">開発中のデモ（データ取得日: <span id="fetched-date">2026-11-12</span>）</span></h1>
+      <div class="subtitle">新入生向け 取引価格の相場×利便性で探す</div>
+    </div>
+    <span id="count">読み込み中…</span>
+  </header>
+
+  <main>
+    <div id="map"></div>
+
+    <div id="data-note">このサービスは、国土交通省不動産情報ライブラリのAPI機能を使用していますが、提供情報の最新性、正確性、完全性等が保証されたものではありません。</div>
+
+    <div id="legend">
+      <h4>取引価格の目安（地区中央値）</h4>
+      <div id="legend-items"></div>
+      <div id="type-filter">
+        <label><input type="radio" name="type-filter" value="all" checked> すべての取引</label>
+        <label><input type="radio" name="type-filter" value="中古マンション等"> 中古マンション等のみ</label>
+      </div>
+    </div>
+  </main>
+
+  <script src="./demo.js"></script>
+</body>
+</html>

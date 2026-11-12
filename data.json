@@ -1,0 +1,3077 @@
+{
+ "fetchedDate": "2026-11-12",
+ "source": "国土交通省 不動産情報ライブラリ API（XIT001: 不動産価格情報取得API）",
+ "cities": [
+  "習志野市",
+  "船橋市"
+ ],
+ "periods": [
+  "2025Q3",
+  "2025Q2",
+  "2025Q1",
+  "2024Q4",
+  "2024Q3",
+  "2024Q2",
+  "2024Q1",
+  "2023Q4"
+ ],
+ "recordCount": 3513,
+ "views": {
+  "all": {
+   "breakpoints": [
+    2400,
+    3150,
+    4100
+   ],
+   "colors": [
+    "#2196F3",
+    "#4CAF50",
+    "#FF9800",
+    "#F44336"
+   ],
+   "skippedNoCoord": 0,
+   "properties": [
+    {
+     "id": "習志野市|大久保",
+     "name": "習志野市 大久保",
+     "point": {
+      "lat": 35.68792,
+      "lng": 140.04724
+     },
+     "municipality": "習志野市",
+     "district_name": "大久保",
+     "trade_price_man_yen_median": 3100,
+     "trade_price_man_yen_min": 1200,
+     "trade_price_man_yen_max": 70000,
+     "area_m2_median": 90,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 47
+    },
+    {
+     "id": "習志野市|奏の杜",
+     "name": "習志野市 奏の杜",
+     "point": {
+      "lat": 35.69138,
+      "lng": 140.01363
+     },
+     "municipality": "習志野市",
+     "district_name": "奏の杜",
+     "trade_price_man_yen_median": 7100,
+     "trade_price_man_yen_min": 3900,
+     "trade_price_man_yen_max": 18000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 35
+    },
+    {
+     "id": "習志野市|実籾",
+     "name": "習志野市 実籾",
+     "point": {
+      "lat": 35.68807,
+      "lng": 140.06583
+     },
+     "municipality": "習志野市",
+     "district_name": "実籾",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 100,
+     "trade_price_man_yen_max": 13000,
+     "area_m2_median": 95,
+     "structure_mode": "木造",
+     "transaction_count": 34
+    },
+    {
+     "id": "習志野市|実籾本郷",
+     "name": "習志野市 実籾本郷",
+     "point": {
+      "lat": 35.68005,
+      "lng": 140.06595
+     },
+     "municipality": "習志野市",
+     "district_name": "実籾本郷",
+     "trade_price_man_yen_median": 4700,
+     "trade_price_man_yen_min": 3000,
+     "trade_price_man_yen_max": 4800,
+     "area_m2_median": 150,
+     "structure_mode": "木造",
+     "transaction_count": 3
+    },
+    {
+     "id": "習志野市|屋敷",
+     "name": "習志野市 屋敷",
+     "point": {
+      "lat": 35.67785,
+      "lng": 140.05444
+     },
+     "municipality": "習志野市",
+     "district_name": "屋敷",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 42000,
+     "area_m2_median": 107.5,
+     "structure_mode": "木造",
+     "transaction_count": 26
+    },
+    {
+     "id": "習志野市|新栄",
+     "name": "習志野市 新栄",
+     "point": {
+      "lat": 35.69181,
+      "lng": 140.0585
+     },
+     "municipality": "習志野市",
+     "district_name": "新栄",
+     "trade_price_man_yen_median": 2400,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 3900,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 5
+    },
+    {
+     "id": "習志野市|本大久保",
+     "name": "習志野市 本大久保",
+     "point": {
+      "lat": 35.68545,
+      "lng": 140.0406
+     },
+     "municipality": "習志野市",
+     "district_name": "本大久保",
+     "trade_price_man_yen_median": 3650,
+     "trade_price_man_yen_min": 600,
+     "trade_price_man_yen_max": 100000,
+     "area_m2_median": 135,
+     "structure_mode": "木造",
+     "transaction_count": 42
+    },
+    {
+     "id": "習志野市|東習志野",
+     "name": "習志野市 東習志野",
+     "point": {
+      "lat": 35.69549,
+      "lng": 140.06572
+     },
+     "municipality": "習志野市",
+     "district_name": "東習志野",
+     "trade_price_man_yen_median": 2500,
+     "trade_price_man_yen_min": 20,
+     "trade_price_man_yen_max": 20000,
+     "area_m2_median": 110,
+     "structure_mode": "木造",
+     "transaction_count": 101
+    },
+    {
+     "id": "習志野市|泉町",
+     "name": "習志野市 泉町",
+     "point": {
+      "lat": 35.6939,
+      "lng": 140.05232
+     },
+     "municipality": "習志野市",
+     "district_name": "泉町",
+     "trade_price_man_yen_median": 2800,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 17000,
+     "area_m2_median": 190,
+     "structure_mode": "軽量鉄骨造",
+     "transaction_count": 4
+    },
+    {
+     "id": "習志野市|津田沼",
+     "name": "習志野市 津田沼",
+     "point": {
+      "lat": 35.68905,
+      "lng": 140.02499
+     },
+     "municipality": "習志野市",
+     "district_name": "津田沼",
+     "trade_price_man_yen_median": 3400,
+     "trade_price_man_yen_min": 110,
+     "trade_price_man_yen_max": 27000,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 48
+    },
+    {
+     "id": "習志野市|秋津",
+     "name": "習志野市 秋津",
+     "point": {
+      "lat": 35.67419,
+      "lng": 140.0139
+     },
+     "municipality": "習志野市",
+     "district_name": "秋津",
+     "trade_price_man_yen_median": 1900,
+     "trade_price_man_yen_min": 530,
+     "trade_price_man_yen_max": 6000,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 35
+    },
+    {
+     "id": "習志野市|花咲",
+     "name": "習志野市 花咲",
+     "point": {
+      "lat": 35.67944,
+      "lng": 140.04544
+     },
+     "municipality": "習志野市",
+     "district_name": "花咲",
+     "trade_price_man_yen_median": 4000,
+     "trade_price_man_yen_min": 300,
+     "trade_price_man_yen_max": 7500,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 13
+    },
+    {
+     "id": "習志野市|茜浜",
+     "name": "習志野市 茜浜",
+     "point": {
+      "lat": 35.67364,
+      "lng": 140.00191
+     },
+     "municipality": "習志野市",
+     "district_name": "茜浜",
+     "trade_price_man_yen_median": 6000,
+     "trade_price_man_yen_min": 5100,
+     "trade_price_man_yen_max": 9400,
+     "area_m2_median": 385,
+     "structure_mode": "軽量鉄骨造",
+     "transaction_count": 4
+    },
+    {
+     "id": "習志野市|藤崎",
+     "name": "習志野市 藤崎",
+     "point": {
+      "lat": 35.68893,
+      "lng": 140.03537
+     },
+     "municipality": "習志野市",
+     "district_name": "藤崎",
+     "trade_price_man_yen_median": 3500,
+     "trade_price_man_yen_min": 200,
+     "trade_price_man_yen_max": 21000,
+     "area_m2_median": 130,
+     "structure_mode": "木造",
+     "transaction_count": 80
+    },
+    {
+     "id": "習志野市|袖ケ浦",
+     "name": "習志野市 袖ケ浦",
+     "point": {
+      "lat": 35.6772,
+      "lng": 140.0139
+     },
+     "municipality": "習志野市",
+     "district_name": "袖ケ浦",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 320,
+     "trade_price_man_yen_max": 11000,
+     "area_m2_median": 100,
+     "structure_mode": "木造",
+     "transaction_count": 25
+    },
+    {
+     "id": "習志野市|谷津",
+     "name": "習志野市 谷津",
+     "point": {
+      "lat": 35.68633,
+      "lng": 140.0174
+     },
+     "municipality": "習志野市",
+     "district_name": "谷津",
+     "trade_price_man_yen_median": 4300,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 23000,
+     "area_m2_median": 90,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 126
+    },
+    {
+     "id": "習志野市|谷津町",
+     "name": "習志野市 谷津町",
+     "point": {
+      "lat": 35.67973,
+      "lng": 140.01648
+     },
+     "municipality": "習志野市",
+     "district_name": "谷津町",
+     "trade_price_man_yen_median": 3100,
+     "trade_price_man_yen_min": 1900,
+     "trade_price_man_yen_max": 5600,
+     "area_m2_median": 67.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "習志野市|香澄",
+     "name": "習志野市 香澄",
+     "point": {
+      "lat": 35.66882,
+      "lng": 140.02268
+     },
+     "municipality": "習志野市",
+     "district_name": "香澄",
+     "trade_price_man_yen_median": 4500,
+     "trade_price_man_yen_min": 1600,
+     "trade_price_man_yen_max": 6600,
+     "area_m2_median": 115,
+     "structure_mode": "木造",
+     "transaction_count": 26
+    },
+    {
+     "id": "習志野市|鷺沼",
+     "name": "習志野市 鷺沼",
+     "point": {
+      "lat": 35.67775,
+      "lng": 140.02673
+     },
+     "municipality": "習志野市",
+     "district_name": "鷺沼",
+     "trade_price_man_yen_median": 3750,
+     "trade_price_man_yen_min": 590,
+     "trade_price_man_yen_max": 8500,
+     "area_m2_median": 135,
+     "structure_mode": "木造",
+     "transaction_count": 34
+    },
+    {
+     "id": "習志野市|鷺沼台",
+     "name": "習志野市 鷺沼台",
+     "point": {
+      "lat": 35.68466,
+      "lng": 140.03084
+     },
+     "municipality": "習志野市",
+     "district_name": "鷺沼台",
+     "trade_price_man_yen_median": 3400,
+     "trade_price_man_yen_min": 170,
+     "trade_price_man_yen_max": 15000,
+     "area_m2_median": 150,
+     "structure_mode": "木造",
+     "transaction_count": 37
+    },
+    {
+     "id": "船橋市|みやぎ台",
+     "name": "船橋市 みやぎ台",
+     "point": {
+      "lat": 35.75735,
+      "lng": 140.03395
+     },
+     "municipality": "船橋市",
+     "district_name": "みやぎ台",
+     "trade_price_man_yen_median": 1850,
+     "trade_price_man_yen_min": 550,
+     "trade_price_man_yen_max": 3200,
+     "area_m2_median": 182.5,
+     "structure_mode": "木造",
+     "transaction_count": 6
+    },
+    {
+     "id": "船橋市|七林町",
+     "name": "船橋市 七林町",
+     "point": {
+      "lat": 35.71584,
+      "lng": 140.03865
+     },
+     "municipality": "船橋市",
+     "district_name": "七林町",
+     "trade_price_man_yen_median": 2650,
+     "trade_price_man_yen_min": 1600,
+     "trade_price_man_yen_max": 11000,
+     "area_m2_median": 105,
+     "structure_mode": "木造",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|三咲",
+     "name": "船橋市 三咲",
+     "point": {
+      "lat": 35.74429,
+      "lng": 140.02826
+     },
+     "municipality": "船橋市",
+     "district_name": "三咲",
+     "trade_price_man_yen_median": 2950,
+     "trade_price_man_yen_min": 100,
+     "trade_price_man_yen_max": 22000,
+     "area_m2_median": 165,
+     "structure_mode": "木造",
+     "transaction_count": 66
+    },
+    {
+     "id": "船橋市|三山",
+     "name": "船橋市 三山",
+     "point": {
+      "lat": 35.6951,
+      "lng": 140.04506
+     },
+     "municipality": "船橋市",
+     "district_name": "三山",
+     "trade_price_man_yen_median": 2200,
+     "trade_price_man_yen_min": 250,
+     "trade_price_man_yen_max": 8400,
+     "area_m2_median": 130,
+     "structure_mode": "木造",
+     "transaction_count": 81
+    },
+    {
+     "id": "船橋市|上山町",
+     "name": "船橋市 上山町",
+     "point": {
+      "lat": 35.7285,
+      "lng": 139.96878
+     },
+     "municipality": "船橋市",
+     "district_name": "上山町",
+     "trade_price_man_yen_median": 3550,
+     "trade_price_man_yen_min": 600,
+     "trade_price_man_yen_max": 18000,
+     "area_m2_median": 127.5,
+     "structure_mode": "木造",
+     "transaction_count": 42
+    },
+    {
+     "id": "船橋市|中野木",
+     "name": "船橋市 中野木",
+     "point": {
+      "lat": 35.7026,
+      "lng": 140.0132
+     },
+     "municipality": "船橋市",
+     "district_name": "中野木",
+     "trade_price_man_yen_median": 3050,
+     "trade_price_man_yen_min": 820,
+     "trade_price_man_yen_max": 27000,
+     "area_m2_median": 102.5,
+     "structure_mode": "木造",
+     "transaction_count": 22
+    },
+    {
+     "id": "船橋市|丸山",
+     "name": "船橋市 丸山",
+     "point": {
+      "lat": 35.7455,
+      "lng": 139.99057
+     },
+     "municipality": "船橋市",
+     "district_name": "丸山",
+     "trade_price_man_yen_median": 1900,
+     "trade_price_man_yen_min": 240,
+     "trade_price_man_yen_max": 6500,
+     "area_m2_median": 135,
+     "structure_mode": "木造",
+     "transaction_count": 53
+    },
+    {
+     "id": "船橋市|二和東",
+     "name": "船橋市 二和東",
+     "point": {
+      "lat": 35.74242,
+      "lng": 140.02031
+     },
+     "municipality": "船橋市",
+     "district_name": "二和東",
+     "trade_price_man_yen_median": 2800,
+     "trade_price_man_yen_min": 350,
+     "trade_price_man_yen_max": 20000,
+     "area_m2_median": 145,
+     "structure_mode": "木造",
+     "transaction_count": 47
+    },
+    {
+     "id": "船橋市|二和西",
+     "name": "船橋市 二和西",
+     "point": {
+      "lat": 35.74271,
+      "lng": 140.00946
+     },
+     "municipality": "船橋市",
+     "district_name": "二和西",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 400,
+     "trade_price_man_yen_max": 29000,
+     "area_m2_median": 170,
+     "structure_mode": "木造",
+     "transaction_count": 33
+    },
+    {
+     "id": "船橋市|二子町",
+     "name": "船橋市 二子町",
+     "point": {
+      "lat": 35.70986,
+      "lng": 139.94818
+     },
+     "municipality": "船橋市",
+     "district_name": "二子町",
+     "trade_price_man_yen_median": 3150,
+     "trade_price_man_yen_min": 2300,
+     "trade_price_man_yen_max": 27000,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 20
+    },
+    {
+     "id": "船橋市|二宮",
+     "name": "船橋市 二宮",
+     "point": {
+      "lat": 35.70821,
+      "lng": 140.02753
+     },
+     "municipality": "船橋市",
+     "district_name": "二宮",
+     "trade_price_man_yen_median": 2400,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 7500,
+     "area_m2_median": 115,
+     "structure_mode": "木造",
+     "transaction_count": 37
+    },
+    {
+     "id": "船橋市|八木が谷",
+     "name": "船橋市 八木が谷",
+     "point": {
+      "lat": 35.76199,
+      "lng": 140.02806
+     },
+     "municipality": "船橋市",
+     "district_name": "八木が谷",
+     "trade_price_man_yen_median": 1800,
+     "trade_price_man_yen_min": 70,
+     "trade_price_man_yen_max": 36000,
+     "area_m2_median": 145,
+     "structure_mode": "木造",
+     "transaction_count": 28
+    },
+    {
+     "id": "船橋市|前原東",
+     "name": "船橋市 前原東",
+     "point": {
+      "lat": 35.69194,
+      "lng": 140.02618
+     },
+     "municipality": "船橋市",
+     "district_name": "前原東",
+     "trade_price_man_yen_median": 4100,
+     "trade_price_man_yen_min": 550,
+     "trade_price_man_yen_max": 35000,
+     "area_m2_median": 127.5,
+     "structure_mode": "木造",
+     "transaction_count": 64
+    },
+    {
+     "id": "船橋市|前原西",
+     "name": "船橋市 前原西",
+     "point": {
+      "lat": 35.69535,
+      "lng": 140.01238
+     },
+     "municipality": "船橋市",
+     "district_name": "前原西",
+     "trade_price_man_yen_median": 4100,
+     "trade_price_man_yen_min": 330,
+     "trade_price_man_yen_max": 170000,
+     "area_m2_median": 75,
+     "structure_mode": "木造",
+     "transaction_count": 107
+    },
+    {
+     "id": "船橋市|前貝塚町",
+     "name": "船橋市 前貝塚町",
+     "point": {
+      "lat": 35.72671,
+      "lng": 139.97893
+     },
+     "municipality": "船橋市",
+     "district_name": "前貝塚町",
+     "trade_price_man_yen_median": 3750,
+     "trade_price_man_yen_min": 900,
+     "trade_price_man_yen_max": 10000,
+     "area_m2_median": 135,
+     "structure_mode": "木造",
+     "transaction_count": 24
+    },
+    {
+     "id": "船橋市|北本町",
+     "name": "船橋市 北本町",
+     "point": {
+      "lat": 35.71037,
+      "lng": 139.98204
+     },
+     "municipality": "船橋市",
+     "district_name": "北本町",
+     "trade_price_man_yen_median": 3500,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 220000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 67
+    },
+    {
+     "id": "船橋市|南三咲",
+     "name": "船橋市 南三咲",
+     "point": {
+      "lat": 35.73348,
+      "lng": 140.02269
+     },
+     "municipality": "船橋市",
+     "district_name": "南三咲",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 280,
+     "trade_price_man_yen_max": 7100,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 21
+    },
+    {
+     "id": "船橋市|南本町",
+     "name": "船橋市 南本町",
+     "point": {
+      "lat": 35.69623,
+      "lng": 139.97801
+     },
+     "municipality": "船橋市",
+     "district_name": "南本町",
+     "trade_price_man_yen_median": 4350,
+     "trade_price_man_yen_min": 630,
+     "trade_price_man_yen_max": 31000,
+     "area_m2_median": 70,
+     "structure_mode": "木造",
+     "transaction_count": 12
+    },
+    {
+     "id": "船橋市|南海神",
+     "name": "船橋市 南海神",
+     "point": {
+      "lat": 35.69629,
+      "lng": 139.96927
+     },
+     "municipality": "船橋市",
+     "district_name": "南海神",
+     "trade_price_man_yen_median": 3300,
+     "trade_price_man_yen_min": 2900,
+     "trade_price_man_yen_max": 45000,
+     "area_m2_median": 50,
+     "structure_mode": "木造",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|印内",
+     "name": "船橋市 印内",
+     "point": {
+      "lat": 35.71423,
+      "lng": 139.95989
+     },
+     "municipality": "船橋市",
+     "district_name": "印内",
+     "trade_price_man_yen_median": 3700,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 14000,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 15
+    },
+    {
+     "id": "船橋市|印内町",
+     "name": "船橋市 印内町",
+     "point": {
+      "lat": 35.70539,
+      "lng": 139.9585
+     },
+     "municipality": "船橋市",
+     "district_name": "印内町",
+     "trade_price_man_yen_median": 3600,
+     "trade_price_man_yen_min": 2600,
+     "trade_price_man_yen_max": 4600,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|古作",
+     "name": "船橋市 古作",
+     "point": {
+      "lat": 35.72488,
+      "lng": 139.96458
+     },
+     "municipality": "船橋市",
+     "district_name": "古作",
+     "trade_price_man_yen_median": 4600,
+     "trade_price_man_yen_min": 2400,
+     "trade_price_man_yen_max": 8300,
+     "area_m2_median": 135,
+     "structure_mode": "木造",
+     "transaction_count": 9
+    },
+    {
+     "id": "船橋市|古和釜町",
+     "name": "船橋市 古和釜町",
+     "point": {
+      "lat": 35.74289,
+      "lng": 140.0562
+     },
+     "municipality": "船橋市",
+     "district_name": "古和釜町",
+     "trade_price_man_yen_median": 2090,
+     "trade_price_man_yen_min": 580,
+     "trade_price_man_yen_max": 3600,
+     "area_m2_median": 182.5,
+     "structure_mode": "木造",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|咲が丘",
+     "name": "船橋市 咲が丘",
+     "point": {
+      "lat": 35.7595,
+      "lng": 140.01715
+     },
+     "municipality": "船橋市",
+     "district_name": "咲が丘",
+     "trade_price_man_yen_median": 2200,
+     "trade_price_man_yen_min": 280,
+     "trade_price_man_yen_max": 12000,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 39
+    },
+    {
+     "id": "船橋市|坪井東",
+     "name": "船橋市 坪井東",
+     "point": {
+      "lat": 35.72813,
+      "lng": 140.05765
+     },
+     "municipality": "船橋市",
+     "district_name": "坪井東",
+     "trade_price_man_yen_median": 4650,
+     "trade_price_man_yen_min": 1900,
+     "trade_price_man_yen_max": 21000,
+     "area_m2_median": 135,
+     "structure_mode": "木造",
+     "transaction_count": 24
+    },
+    {
+     "id": "船橋市|坪井町",
+     "name": "船橋市 坪井町",
+     "point": {
+      "lat": 35.73697,
+      "lng": 140.06056
+     },
+     "municipality": "船橋市",
+     "district_name": "坪井町",
+     "trade_price_man_yen_median": 3750,
+     "trade_price_man_yen_min": 1100,
+     "trade_price_man_yen_max": 9600,
+     "area_m2_median": 177.5,
+     "structure_mode": "木造",
+     "transaction_count": 10
+    },
+    {
+     "id": "船橋市|坪井西",
+     "name": "船橋市 坪井西",
+     "point": {
+      "lat": 35.73261,
+      "lng": 140.05272
+     },
+     "municipality": "船橋市",
+     "district_name": "坪井西",
+     "trade_price_man_yen_median": 2400,
+     "trade_price_man_yen_min": 1000,
+     "trade_price_man_yen_max": 4300,
+     "area_m2_median": 107.5,
+     "structure_mode": "木造",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|夏見",
+     "name": "船橋市 夏見",
+     "point": {
+      "lat": 35.70792,
+      "lng": 139.98927
+     },
+     "municipality": "船橋市",
+     "district_name": "夏見",
+     "trade_price_man_yen_median": 4300,
+     "trade_price_man_yen_min": 950,
+     "trade_price_man_yen_max": 38000,
+     "area_m2_median": 90,
+     "structure_mode": "木造",
+     "transaction_count": 77
+    },
+    {
+     "id": "船橋市|夏見台",
+     "name": "船橋市 夏見台",
+     "point": {
+      "lat": 35.71837,
+      "lng": 139.99252
+     },
+     "municipality": "船橋市",
+     "district_name": "夏見台",
+     "trade_price_man_yen_median": 2500,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 28000,
+     "area_m2_median": 90,
+     "structure_mode": "木造",
+     "transaction_count": 53
+    },
+    {
+     "id": "船橋市|夏見町",
+     "name": "船橋市 夏見町",
+     "point": {
+      "lat": 35.71933,
+      "lng": 139.99712
+     },
+     "municipality": "船橋市",
+     "district_name": "夏見町",
+     "trade_price_man_yen_median": 4600,
+     "trade_price_man_yen_min": 2900,
+     "trade_price_man_yen_max": 5600,
+     "area_m2_median": 170,
+     "structure_mode": "木造",
+     "transaction_count": 5
+    },
+    {
+     "id": "船橋市|大神保町",
+     "name": "船橋市 大神保町",
+     "point": {
+      "lat": 35.77381,
+      "lng": 140.06192
+     },
+     "municipality": "船橋市",
+     "district_name": "大神保町",
+     "trade_price_man_yen_median": 1300,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 1300,
+     "area_m2_median": 670,
+     "structure_mode": "軽量鉄骨造",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|大穴北",
+     "name": "船橋市 大穴北",
+     "point": {
+      "lat": 35.74636,
+      "lng": 140.03943
+     },
+     "municipality": "船橋市",
+     "district_name": "大穴北",
+     "trade_price_man_yen_median": 2250,
+     "trade_price_man_yen_min": 170,
+     "trade_price_man_yen_max": 4700,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 40
+    },
+    {
+     "id": "船橋市|大穴南",
+     "name": "船橋市 大穴南",
+     "point": {
+      "lat": 35.74098,
+      "lng": 140.03177
+     },
+     "municipality": "船橋市",
+     "district_name": "大穴南",
+     "trade_price_man_yen_median": 2100,
+     "trade_price_man_yen_min": 320,
+     "trade_price_man_yen_max": 5500,
+     "area_m2_median": 125,
+     "structure_mode": "木造",
+     "transaction_count": 33
+    },
+    {
+     "id": "船橋市|大穴町",
+     "name": "船橋市 大穴町",
+     "point": {
+      "lat": 35.73697,
+      "lng": 140.03102
+     },
+     "municipality": "船橋市",
+     "district_name": "大穴町",
+     "trade_price_man_yen_median": 3250,
+     "trade_price_man_yen_min": 3200,
+     "trade_price_man_yen_max": 3300,
+     "area_m2_median": 165,
+     "structure_mode": "木造",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|宮本",
+     "name": "船橋市 宮本",
+     "point": {
+      "lat": 35.69872,
+      "lng": 139.99199
+     },
+     "municipality": "船橋市",
+     "district_name": "宮本",
+     "trade_price_man_yen_median": 4300,
+     "trade_price_man_yen_min": 63,
+     "trade_price_man_yen_max": 39000,
+     "area_m2_median": 100,
+     "structure_mode": "木造",
+     "transaction_count": 67
+    },
+    {
+     "id": "船橋市|小室町",
+     "name": "船橋市 小室町",
+     "point": {
+      "lat": 35.79073,
+      "lng": 140.07529
+     },
+     "municipality": "船橋市",
+     "district_name": "小室町",
+     "trade_price_man_yen_median": 2350,
+     "trade_price_man_yen_min": 290,
+     "trade_price_man_yen_max": 7800,
+     "area_m2_median": 155,
+     "structure_mode": "木造",
+     "transaction_count": 34
+    },
+    {
+     "id": "船橋市|小野田町",
+     "name": "船橋市 小野田町",
+     "point": {
+      "lat": 35.78041,
+      "lng": 140.0764
+     },
+     "municipality": "船橋市",
+     "district_name": "小野田町",
+     "trade_price_man_yen_median": 950,
+     "trade_price_man_yen_min": 950,
+     "trade_price_man_yen_max": 950,
+     "area_m2_median": 3400,
+     "structure_mode": null,
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|山手",
+     "name": "船橋市 山手",
+     "point": {
+      "lat": 35.71314,
+      "lng": 139.97722
+     },
+     "municipality": "船橋市",
+     "district_name": "山手",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 1100000,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 27
+    },
+    {
+     "id": "船橋市|山野町",
+     "name": "船橋市 山野町",
+     "point": {
+      "lat": 35.70445,
+      "lng": 139.96257
+     },
+     "municipality": "船橋市",
+     "district_name": "山野町",
+     "trade_price_man_yen_median": 4350,
+     "trade_price_man_yen_min": 1400,
+     "trade_price_man_yen_max": 82000,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 12
+    },
+    {
+     "id": "船橋市|市場",
+     "name": "船橋市 市場",
+     "point": {
+      "lat": 35.70348,
+      "lng": 139.99289
+     },
+     "municipality": "船橋市",
+     "district_name": "市場",
+     "trade_price_man_yen_median": 2950,
+     "trade_price_man_yen_min": 100,
+     "trade_price_man_yen_max": 1200000,
+     "area_m2_median": 75,
+     "structure_mode": "木造",
+     "transaction_count": 32
+    },
+    {
+     "id": "船橋市|新高根",
+     "name": "船橋市 新高根",
+     "point": {
+      "lat": 35.72379,
+      "lng": 140.02023
+     },
+     "municipality": "船橋市",
+     "district_name": "新高根",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 190,
+     "trade_price_man_yen_max": 5700,
+     "area_m2_median": 145,
+     "structure_mode": "木造",
+     "transaction_count": 37
+    },
+    {
+     "id": "船橋市|日の出",
+     "name": "船橋市 日の出",
+     "point": {
+      "lat": 35.68833,
+      "lng": 139.98108
+     },
+     "municipality": "船橋市",
+     "district_name": "日の出",
+     "trade_price_man_yen_median": 3700,
+     "trade_price_man_yen_min": 2400,
+     "trade_price_man_yen_max": 4800,
+     "area_m2_median": 102.5,
+     "structure_mode": "木造",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|旭町",
+     "name": "船橋市 旭町",
+     "point": {
+      "lat": 35.73129,
+      "lng": 139.98485
+     },
+     "municipality": "船橋市",
+     "district_name": "旭町",
+     "trade_price_man_yen_median": 2950,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 6200,
+     "area_m2_median": 115,
+     "structure_mode": "木造",
+     "transaction_count": 34
+    },
+    {
+     "id": "船橋市|本中山",
+     "name": "船橋市 本中山",
+     "point": {
+      "lat": 35.71637,
+      "lng": 139.94504
+     },
+     "municipality": "船橋市",
+     "district_name": "本中山",
+     "trade_price_man_yen_median": 3650,
+     "trade_price_man_yen_min": 700,
+     "trade_price_man_yen_max": 34000,
+     "area_m2_median": 80,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 56
+    },
+    {
+     "id": "船橋市|本町",
+     "name": "船橋市 本町",
+     "point": {
+      "lat": 35.70004,
+      "lng": 139.98348
+     },
+     "municipality": "船橋市",
+     "district_name": "本町",
+     "trade_price_man_yen_median": 5300,
+     "trade_price_man_yen_min": 10,
+     "trade_price_man_yen_max": 43000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 74
+    },
+    {
+     "id": "船橋市|本郷町",
+     "name": "船橋市 本郷町",
+     "point": {
+      "lat": 35.70791,
+      "lng": 139.95209
+     },
+     "municipality": "船橋市",
+     "district_name": "本郷町",
+     "trade_price_man_yen_median": 4400,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 37000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 26
+    },
+    {
+     "id": "船橋市|東中山",
+     "name": "船橋市 東中山",
+     "point": {
+      "lat": 35.7128,
+      "lng": 139.95024
+     },
+     "municipality": "船橋市",
+     "district_name": "東中山",
+     "trade_price_man_yen_median": 3900,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 11000,
+     "area_m2_median": 77.5,
+     "structure_mode": "木造",
+     "transaction_count": 22
+    },
+    {
+     "id": "船橋市|東町",
+     "name": "船橋市 東町",
+     "point": {
+      "lat": 35.70855,
+      "lng": 140.00302
+     },
+     "municipality": "船橋市",
+     "district_name": "東町",
+     "trade_price_man_yen_median": 2000,
+     "trade_price_man_yen_min": 2000,
+     "trade_price_man_yen_max": 2000,
+     "area_m2_median": 120,
+     "structure_mode": null,
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|東船橋",
+     "name": "船橋市 東船橋",
+     "point": {
+      "lat": 35.69826,
+      "lng": 140.00168
+     },
+     "municipality": "船橋市",
+     "district_name": "東船橋",
+     "trade_price_man_yen_median": 5800,
+     "trade_price_man_yen_min": 1000,
+     "trade_price_man_yen_max": 26000,
+     "area_m2_median": 125,
+     "structure_mode": "木造",
+     "transaction_count": 33
+    },
+    {
+     "id": "船橋市|松が丘",
+     "name": "船橋市 松が丘",
+     "point": {
+      "lat": 35.73517,
+      "lng": 140.04208
+     },
+     "municipality": "船橋市",
+     "district_name": "松が丘",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 280,
+     "trade_price_man_yen_max": 12000,
+     "area_m2_median": 130,
+     "structure_mode": "木造",
+     "transaction_count": 76
+    },
+    {
+     "id": "船橋市|栄町",
+     "name": "船橋市 栄町",
+     "point": {
+      "lat": 35.69254,
+      "lng": 139.9751
+     },
+     "municipality": "船橋市",
+     "district_name": "栄町",
+     "trade_price_man_yen_median": 3600,
+     "trade_price_man_yen_min": 900,
+     "trade_price_man_yen_max": 98000,
+     "area_m2_median": 85,
+     "structure_mode": "鉄骨造",
+     "transaction_count": 13
+    },
+    {
+     "id": "船橋市|楠が山町",
+     "name": "船橋市 楠が山町",
+     "point": {
+      "lat": 35.75298,
+      "lng": 140.05516
+     },
+     "municipality": "船橋市",
+     "district_name": "楠が山町",
+     "trade_price_man_yen_median": 1300,
+     "trade_price_man_yen_min": 350,
+     "trade_price_man_yen_max": 2400,
+     "area_m2_median": 212.5,
+     "structure_mode": "木造",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|浜町",
+     "name": "船橋市 浜町",
+     "point": {
+      "lat": 35.69016,
+      "lng": 139.99005
+     },
+     "municipality": "船橋市",
+     "district_name": "浜町",
+     "trade_price_man_yen_median": 4550,
+     "trade_price_man_yen_min": 700,
+     "trade_price_man_yen_max": 15000,
+     "area_m2_median": 70,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 28
+    },
+    {
+     "id": "船橋市|海神",
+     "name": "船橋市 海神",
+     "point": {
+      "lat": 35.70018,
+      "lng": 139.97853
+     },
+     "municipality": "船橋市",
+     "district_name": "海神",
+     "trade_price_man_yen_median": 4250,
+     "trade_price_man_yen_min": 390,
+     "trade_price_man_yen_max": 28000,
+     "area_m2_median": 100,
+     "structure_mode": "木造",
+     "transaction_count": 82
+    },
+    {
+     "id": "船橋市|海神町",
+     "name": "船橋市 海神町",
+     "point": {
+      "lat": 35.69896,
+      "lng": 139.97376
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 900,
+     "trade_price_man_yen_max": 44000,
+     "area_m2_median": 65,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 25
+    },
+    {
+     "id": "船橋市|海神町南",
+     "name": "船橋市 海神町南",
+     "point": {
+      "lat": 35.70071,
+      "lng": 139.96698
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町南",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 1800,
+     "trade_price_man_yen_max": 6900,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 26
+    },
+    {
+     "id": "船橋市|海神町東",
+     "name": "船橋市 海神町東",
+     "point": {
+      "lat": 35.70171,
+      "lng": 139.97191
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町東",
+     "trade_price_man_yen_median": 3500,
+     "trade_price_man_yen_min": 2400,
+     "trade_price_man_yen_max": 8200,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 5
+    },
+    {
+     "id": "船橋市|海神町西",
+     "name": "船橋市 海神町西",
+     "point": {
+      "lat": 35.7029,
+      "lng": 139.96756
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町西",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 4900,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|湊町",
+     "name": "船橋市 湊町",
+     "point": {
+      "lat": 35.69291,
+      "lng": 139.98601
+     },
+     "municipality": "船橋市",
+     "district_name": "湊町",
+     "trade_price_man_yen_median": 4500,
+     "trade_price_man_yen_min": 560,
+     "trade_price_man_yen_max": 53000,
+     "area_m2_median": 80,
+     "structure_mode": "木造",
+     "transaction_count": 34
+    },
+    {
+     "id": "船橋市|滝台",
+     "name": "船橋市 滝台",
+     "point": {
+      "lat": 35.70567,
+      "lng": 140.03546
+     },
+     "municipality": "船橋市",
+     "district_name": "滝台",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 2600,
+     "trade_price_man_yen_max": 3200,
+     "area_m2_median": 72.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|田喜野井",
+     "name": "船橋市 田喜野井",
+     "point": {
+      "lat": 35.69776,
+      "lng": 140.03928
+     },
+     "municipality": "船橋市",
+     "district_name": "田喜野井",
+     "trade_price_man_yen_median": 2300,
+     "trade_price_man_yen_min": 260,
+     "trade_price_man_yen_max": 6200,
+     "area_m2_median": 132.5,
+     "structure_mode": "木造",
+     "transaction_count": 52
+    },
+    {
+     "id": "船橋市|神保町",
+     "name": "船橋市 神保町",
+     "point": {
+      "lat": 35.76216,
+      "lng": 140.05156
+     },
+     "municipality": "船橋市",
+     "district_name": "神保町",
+     "trade_price_man_yen_median": 640,
+     "trade_price_man_yen_min": 620,
+     "trade_price_man_yen_max": 7900,
+     "area_m2_median": 350,
+     "structure_mode": "木造",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|米ヶ崎町",
+     "name": "船橋市 米ヶ崎町",
+     "point": {
+      "lat": 35.71309,
+      "lng": 140.0043
+     },
+     "municipality": "船橋市",
+     "district_name": "米ヶ崎町",
+     "trade_price_man_yen_median": 3400,
+     "trade_price_man_yen_min": 2500,
+     "trade_price_man_yen_max": 5400,
+     "area_m2_median": 257.5,
+     "structure_mode": "木造",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|緑台",
+     "name": "船橋市 緑台",
+     "point": {
+      "lat": 35.72776,
+      "lng": 140.01761
+     },
+     "municipality": "船橋市",
+     "district_name": "緑台",
+     "trade_price_man_yen_median": 815,
+     "trade_price_man_yen_min": 270,
+     "trade_price_man_yen_max": 4500,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 18
+    },
+    {
+     "id": "船橋市|習志野",
+     "name": "船橋市 習志野",
+     "point": {
+      "lat": 35.71162,
+      "lng": 140.05592
+     },
+     "municipality": "船橋市",
+     "district_name": "習志野",
+     "trade_price_man_yen_median": 2950,
+     "trade_price_man_yen_min": 890,
+     "trade_price_man_yen_max": 22000,
+     "area_m2_median": 125,
+     "structure_mode": "木造",
+     "transaction_count": 14
+    },
+    {
+     "id": "船橋市|習志野台",
+     "name": "船橋市 習志野台",
+     "point": {
+      "lat": 35.72591,
+      "lng": 140.03839
+     },
+     "municipality": "船橋市",
+     "district_name": "習志野台",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 300,
+     "trade_price_man_yen_max": 45000,
+     "area_m2_median": 85,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 139
+    },
+    {
+     "id": "船橋市|芝山",
+     "name": "船橋市 芝山",
+     "point": {
+      "lat": 35.71528,
+      "lng": 140.01759
+     },
+     "municipality": "船橋市",
+     "district_name": "芝山",
+     "trade_price_man_yen_median": 2350,
+     "trade_price_man_yen_min": 400,
+     "trade_price_man_yen_max": 27000,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 52
+    },
+    {
+     "id": "船橋市|若松",
+     "name": "船橋市 若松",
+     "point": {
+      "lat": 35.6845,
+      "lng": 139.99686
+     },
+     "municipality": "船橋市",
+     "district_name": "若松",
+     "trade_price_man_yen_median": 1800,
+     "trade_price_man_yen_min": 1500,
+     "trade_price_man_yen_max": 8400,
+     "area_m2_median": 45,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 10
+    },
+    {
+     "id": "船橋市|葛飾町",
+     "name": "船橋市 葛飾町",
+     "point": {
+      "lat": 35.70628,
+      "lng": 139.95615
+     },
+     "municipality": "船橋市",
+     "district_name": "葛飾町",
+     "trade_price_man_yen_median": 4600,
+     "trade_price_man_yen_min": 2000,
+     "trade_price_man_yen_max": 70000,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|薬円台",
+     "name": "船橋市 薬円台",
+     "point": {
+      "lat": 35.70828,
+      "lng": 140.041
+     },
+     "municipality": "船橋市",
+     "district_name": "薬円台",
+     "trade_price_man_yen_median": 2750,
+     "trade_price_man_yen_min": 530,
+     "trade_price_man_yen_max": 17000,
+     "area_m2_median": 110,
+     "structure_mode": "木造",
+     "transaction_count": 56
+    },
+    {
+     "id": "船橋市|薬園台町",
+     "name": "船橋市 薬園台町",
+     "point": {
+      "lat": 35.70648,
+      "lng": 140.04054
+     },
+     "municipality": "船橋市",
+     "district_name": "薬園台町",
+     "trade_price_man_yen_median": 9600,
+     "trade_price_man_yen_min": 9600,
+     "trade_price_man_yen_max": 9600,
+     "area_m2_median": 440,
+     "structure_mode": null,
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|藤原",
+     "name": "船橋市 藤原",
+     "point": {
+      "lat": 35.73135,
+      "lng": 139.9639
+     },
+     "municipality": "船橋市",
+     "district_name": "藤原",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 200,
+     "trade_price_man_yen_max": 46000,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 64
+    },
+    {
+     "id": "船橋市|行田",
+     "name": "船橋市 行田",
+     "point": {
+      "lat": 35.72093,
+      "lng": 139.97884
+     },
+     "municipality": "船橋市",
+     "district_name": "行田",
+     "trade_price_man_yen_median": 3900,
+     "trade_price_man_yen_min": 620,
+     "trade_price_man_yen_max": 7100,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 41
+    },
+    {
+     "id": "船橋市|行田町",
+     "name": "船橋市 行田町",
+     "point": {
+      "lat": 35.72429,
+      "lng": 139.97475
+     },
+     "municipality": "船橋市",
+     "district_name": "行田町",
+     "trade_price_man_yen_median": 4700,
+     "trade_price_man_yen_min": 3300,
+     "trade_price_man_yen_max": 14000,
+     "area_m2_median": 105,
+     "structure_mode": "木造",
+     "transaction_count": 7
+    },
+    {
+     "id": "船橋市|西浦",
+     "name": "船橋市 西浦",
+     "point": {
+      "lat": 35.69226,
+      "lng": 139.9668
+     },
+     "municipality": "船橋市",
+     "district_name": "西浦",
+     "trade_price_man_yen_median": 71000,
+     "trade_price_man_yen_min": 71000,
+     "trade_price_man_yen_max": 71000,
+     "area_m2_median": 9999,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|西習志野",
+     "name": "船橋市 西習志野",
+     "point": {
+      "lat": 35.72382,
+      "lng": 140.03299
+     },
+     "municipality": "船橋市",
+     "district_name": "西習志野",
+     "trade_price_man_yen_median": 4400,
+     "trade_price_man_yen_min": 1000,
+     "trade_price_man_yen_max": 70000,
+     "area_m2_median": 115,
+     "structure_mode": "木造",
+     "transaction_count": 55
+    },
+    {
+     "id": "船橋市|西船",
+     "name": "船橋市 西船",
+     "point": {
+      "lat": 35.7072,
+      "lng": 139.96545
+     },
+     "municipality": "船橋市",
+     "district_name": "西船",
+     "trade_price_man_yen_median": 4200,
+     "trade_price_man_yen_min": 180,
+     "trade_price_man_yen_max": 33000,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 65
+    },
+    {
+     "id": "船橋市|豊富町",
+     "name": "船橋市 豊富町",
+     "point": {
+      "lat": 35.76296,
+      "lng": 140.06863
+     },
+     "municipality": "船橋市",
+     "district_name": "豊富町",
+     "trade_price_man_yen_median": 360,
+     "trade_price_man_yen_min": 50,
+     "trade_price_man_yen_max": 2900,
+     "area_m2_median": 180,
+     "structure_mode": "木造",
+     "transaction_count": 10
+    },
+    {
+     "id": "船橋市|金堀町",
+     "name": "船橋市 金堀町",
+     "point": {
+      "lat": 35.75542,
+      "lng": 140.06177
+     },
+     "municipality": "船橋市",
+     "district_name": "金堀町",
+     "trade_price_man_yen_median": 250,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 1300,
+     "area_m2_median": 130,
+     "structure_mode": "木造",
+     "transaction_count": 5
+    },
+    {
+     "id": "船橋市|金杉",
+     "name": "船橋市 金杉",
+     "point": {
+      "lat": 35.72669,
+      "lng": 140.00093
+     },
+     "municipality": "船橋市",
+     "district_name": "金杉",
+     "trade_price_man_yen_median": 2000,
+     "trade_price_man_yen_min": 320,
+     "trade_price_man_yen_max": 12000,
+     "area_m2_median": 170,
+     "structure_mode": "木造",
+     "transaction_count": 53
+    },
+    {
+     "id": "船橋市|金杉台",
+     "name": "船橋市 金杉台",
+     "point": {
+      "lat": 35.73623,
+      "lng": 140.01051
+     },
+     "municipality": "船橋市",
+     "district_name": "金杉台",
+     "trade_price_man_yen_median": 305,
+     "trade_price_man_yen_min": 65,
+     "trade_price_man_yen_max": 770,
+     "area_m2_median": 45,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 20
+    },
+    {
+     "id": "船橋市|鈴身町",
+     "name": "船橋市 鈴身町",
+     "point": {
+      "lat": 35.76739,
+      "lng": 140.07912
+     },
+     "municipality": "船橋市",
+     "district_name": "鈴身町",
+     "trade_price_man_yen_median": 30,
+     "trade_price_man_yen_min": 10,
+     "trade_price_man_yen_max": 2800,
+     "area_m2_median": 390,
+     "structure_mode": null,
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|飯山満町",
+     "name": "船橋市 飯山満町",
+     "point": {
+      "lat": 35.71277,
+      "lng": 140.01086
+     },
+     "municipality": "船橋市",
+     "district_name": "飯山満町",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 19000,
+     "area_m2_median": 105,
+     "structure_mode": "木造",
+     "transaction_count": 99
+    },
+    {
+     "id": "船橋市|馬込町",
+     "name": "船橋市 馬込町",
+     "point": {
+      "lat": 35.73824,
+      "lng": 140.00001
+     },
+     "municipality": "船橋市",
+     "district_name": "馬込町",
+     "trade_price_man_yen_median": 2300,
+     "trade_price_man_yen_min": 300,
+     "trade_price_man_yen_max": 38000,
+     "area_m2_median": 165,
+     "structure_mode": "木造",
+     "transaction_count": 19
+    },
+    {
+     "id": "船橋市|馬込西",
+     "name": "船橋市 馬込西",
+     "point": {
+      "lat": 35.74196,
+      "lng": 139.99474
+     },
+     "municipality": "船橋市",
+     "district_name": "馬込西",
+     "trade_price_man_yen_median": 2300,
+     "trade_price_man_yen_min": 300,
+     "trade_price_man_yen_max": 5500,
+     "area_m2_median": 127.5,
+     "structure_mode": "木造",
+     "transaction_count": 12
+    },
+    {
+     "id": "船橋市|駿河台",
+     "name": "船橋市 駿河台",
+     "point": {
+      "lat": 35.70554,
+      "lng": 140.00729
+     },
+     "municipality": "船橋市",
+     "district_name": "駿河台",
+     "trade_price_man_yen_median": 4150,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 14000,
+     "area_m2_median": 115,
+     "structure_mode": "木造",
+     "transaction_count": 22
+    },
+    {
+     "id": "船橋市|高根台",
+     "name": "船橋市 高根台",
+     "point": {
+      "lat": 35.73144,
+      "lng": 140.03023
+     },
+     "municipality": "船橋市",
+     "district_name": "高根台",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 230,
+     "trade_price_man_yen_max": 7800,
+     "area_m2_median": 80,
+     "structure_mode": "木造",
+     "transaction_count": 67
+    },
+    {
+     "id": "船橋市|高根町",
+     "name": "船橋市 高根町",
+     "point": {
+      "lat": 35.72199,
+      "lng": 140.00836
+     },
+     "municipality": "船橋市",
+     "district_name": "高根町",
+     "trade_price_man_yen_median": 2500,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 6500,
+     "area_m2_median": 170,
+     "structure_mode": "木造",
+     "transaction_count": 29
+    },
+    {
+     "id": "船橋市|高瀬町",
+     "name": "船橋市 高瀬町",
+     "point": {
+      "lat": 35.67117,
+      "lng": 139.99344
+     },
+     "municipality": "船橋市",
+     "district_name": "高瀬町",
+     "trade_price_man_yen_median": 4300,
+     "trade_price_man_yen_min": 4300,
+     "trade_price_man_yen_max": 4300,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|高野台",
+     "name": "船橋市 高野台",
+     "point": {
+      "lat": 35.765,
+      "lng": 140.02631
+     },
+     "municipality": "船橋市",
+     "district_name": "高野台",
+     "trade_price_man_yen_median": 1000,
+     "trade_price_man_yen_min": 100,
+     "trade_price_man_yen_max": 22000,
+     "area_m2_median": 120,
+     "structure_mode": "木造",
+     "transaction_count": 31
+    }
+   ]
+  },
+  "中古マンション等": {
+   "breakpoints": [
+    1750,
+    2600,
+    3100
+   ],
+   "colors": [
+    "#2196F3",
+    "#4CAF50",
+    "#FF9800",
+    "#F44336"
+   ],
+   "skippedNoCoord": 0,
+   "properties": [
+    {
+     "id": "習志野市|大久保",
+     "name": "習志野市 大久保",
+     "point": {
+      "lat": 35.68792,
+      "lng": 140.04724
+     },
+     "municipality": "習志野市",
+     "district_name": "大久保",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 1200,
+     "trade_price_man_yen_max": 4800,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 25
+    },
+    {
+     "id": "習志野市|奏の杜",
+     "name": "習志野市 奏の杜",
+     "point": {
+      "lat": 35.69138,
+      "lng": 140.01363
+     },
+     "municipality": "習志野市",
+     "district_name": "奏の杜",
+     "trade_price_man_yen_median": 7050,
+     "trade_price_man_yen_min": 3900,
+     "trade_price_man_yen_max": 8900,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 34
+    },
+    {
+     "id": "習志野市|実籾",
+     "name": "習志野市 実籾",
+     "point": {
+      "lat": 35.68807,
+      "lng": 140.06583
+     },
+     "municipality": "習志野市",
+     "district_name": "実籾",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 450,
+     "trade_price_man_yen_max": 3000,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 9
+    },
+    {
+     "id": "習志野市|屋敷",
+     "name": "習志野市 屋敷",
+     "point": {
+      "lat": 35.67785,
+      "lng": 140.05444
+     },
+     "municipality": "習志野市",
+     "district_name": "屋敷",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 3700,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 7
+    },
+    {
+     "id": "習志野市|新栄",
+     "name": "習志野市 新栄",
+     "point": {
+      "lat": 35.69181,
+      "lng": 140.0585
+     },
+     "municipality": "習志野市",
+     "district_name": "新栄",
+     "trade_price_man_yen_median": 2050,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 2600,
+     "area_m2_median": 72.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "習志野市|本大久保",
+     "name": "習志野市 本大久保",
+     "point": {
+      "lat": 35.68545,
+      "lng": 140.0406
+     },
+     "municipality": "習志野市",
+     "district_name": "本大久保",
+     "trade_price_man_yen_median": 1950,
+     "trade_price_man_yen_min": 1100,
+     "trade_price_man_yen_max": 2700,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "習志野市|東習志野",
+     "name": "習志野市 東習志野",
+     "point": {
+      "lat": 35.69549,
+      "lng": 140.06572
+     },
+     "municipality": "習志野市",
+     "district_name": "東習志野",
+     "trade_price_man_yen_median": 2500,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 3800,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 40
+    },
+    {
+     "id": "習志野市|泉町",
+     "name": "習志野市 泉町",
+     "point": {
+      "lat": 35.6939,
+      "lng": 140.05232
+     },
+     "municipality": "習志野市",
+     "district_name": "泉町",
+     "trade_price_man_yen_median": 1300,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 1300,
+     "area_m2_median": 65,
+     "structure_mode": null,
+     "transaction_count": 1
+    },
+    {
+     "id": "習志野市|津田沼",
+     "name": "習志野市 津田沼",
+     "point": {
+      "lat": 35.68905,
+      "lng": 140.02499
+     },
+     "municipality": "習志野市",
+     "district_name": "津田沼",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 110,
+     "trade_price_man_yen_max": 5800,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 26
+    },
+    {
+     "id": "習志野市|秋津",
+     "name": "習志野市 秋津",
+     "point": {
+      "lat": 35.67419,
+      "lng": 140.0139
+     },
+     "municipality": "習志野市",
+     "district_name": "秋津",
+     "trade_price_man_yen_median": 1500,
+     "trade_price_man_yen_min": 530,
+     "trade_price_man_yen_max": 5300,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 27
+    },
+    {
+     "id": "習志野市|藤崎",
+     "name": "習志野市 藤崎",
+     "point": {
+      "lat": 35.68893,
+      "lng": 140.03537
+     },
+     "municipality": "習志野市",
+     "district_name": "藤崎",
+     "trade_price_man_yen_median": 2850,
+     "trade_price_man_yen_min": 1800,
+     "trade_price_man_yen_max": 3700,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "習志野市|袖ケ浦",
+     "name": "習志野市 袖ケ浦",
+     "point": {
+      "lat": 35.6772,
+      "lng": 140.0139
+     },
+     "municipality": "習志野市",
+     "district_name": "袖ケ浦",
+     "trade_price_man_yen_median": 1400,
+     "trade_price_man_yen_min": 320,
+     "trade_price_man_yen_max": 2800,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 12
+    },
+    {
+     "id": "習志野市|谷津",
+     "name": "習志野市 谷津",
+     "point": {
+      "lat": 35.68633,
+      "lng": 140.0174
+     },
+     "municipality": "習志野市",
+     "district_name": "谷津",
+     "trade_price_man_yen_median": 3000,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 12000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 61
+    },
+    {
+     "id": "習志野市|谷津町",
+     "name": "習志野市 谷津町",
+     "point": {
+      "lat": 35.67973,
+      "lng": 140.01648
+     },
+     "municipality": "習志野市",
+     "district_name": "谷津町",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 1900,
+     "trade_price_man_yen_max": 3600,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 5
+    },
+    {
+     "id": "習志野市|香澄",
+     "name": "習志野市 香澄",
+     "point": {
+      "lat": 35.66882,
+      "lng": 140.02268
+     },
+     "municipality": "習志野市",
+     "district_name": "香澄",
+     "trade_price_man_yen_median": 1950,
+     "trade_price_man_yen_min": 1600,
+     "trade_price_man_yen_max": 2700,
+     "area_m2_median": 90,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "習志野市|鷺沼",
+     "name": "習志野市 鷺沼",
+     "point": {
+      "lat": 35.67775,
+      "lng": 140.02673
+     },
+     "municipality": "習志野市",
+     "district_name": "鷺沼",
+     "trade_price_man_yen_median": 3000,
+     "trade_price_man_yen_min": 1200,
+     "trade_price_man_yen_max": 3700,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "習志野市|鷺沼台",
+     "name": "習志野市 鷺沼台",
+     "point": {
+      "lat": 35.68466,
+      "lng": 140.03084
+     },
+     "municipality": "習志野市",
+     "district_name": "鷺沼台",
+     "trade_price_man_yen_median": 2950,
+     "trade_price_man_yen_min": 1900,
+     "trade_price_man_yen_max": 4000,
+     "area_m2_median": 67.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|七林町",
+     "name": "船橋市 七林町",
+     "point": {
+      "lat": 35.71584,
+      "lng": 140.03865
+     },
+     "municipality": "船橋市",
+     "district_name": "七林町",
+     "trade_price_man_yen_median": 2500,
+     "trade_price_man_yen_min": 1800,
+     "trade_price_man_yen_max": 3000,
+     "area_m2_median": 62.5,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|三咲",
+     "name": "船橋市 三咲",
+     "point": {
+      "lat": 35.74429,
+      "lng": 140.02826
+     },
+     "municipality": "船橋市",
+     "district_name": "三咲",
+     "trade_price_man_yen_median": 1000,
+     "trade_price_man_yen_min": 1000,
+     "trade_price_man_yen_max": 1000,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|三山",
+     "name": "船橋市 三山",
+     "point": {
+      "lat": 35.6951,
+      "lng": 140.04506
+     },
+     "municipality": "船橋市",
+     "district_name": "三山",
+     "trade_price_man_yen_median": 2050,
+     "trade_price_man_yen_min": 250,
+     "trade_price_man_yen_max": 3400,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|上山町",
+     "name": "船橋市 上山町",
+     "point": {
+      "lat": 35.7285,
+      "lng": 139.96878
+     },
+     "municipality": "船橋市",
+     "district_name": "上山町",
+     "trade_price_man_yen_median": 3400,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 3900,
+     "area_m2_median": 77.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "船橋市|中野木",
+     "name": "船橋市 中野木",
+     "point": {
+      "lat": 35.7026,
+      "lng": 140.0132
+     },
+     "municipality": "船橋市",
+     "district_name": "中野木",
+     "trade_price_man_yen_median": 2500,
+     "trade_price_man_yen_min": 820,
+     "trade_price_man_yen_max": 3700,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 9
+    },
+    {
+     "id": "船橋市|丸山",
+     "name": "船橋市 丸山",
+     "point": {
+      "lat": 35.7455,
+      "lng": 139.99057
+     },
+     "municipality": "船橋市",
+     "district_name": "丸山",
+     "trade_price_man_yen_median": 1650,
+     "trade_price_man_yen_min": 1400,
+     "trade_price_man_yen_max": 1900,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|二和東",
+     "name": "船橋市 二和東",
+     "point": {
+      "lat": 35.74242,
+      "lng": 140.02031
+     },
+     "municipality": "船橋市",
+     "district_name": "二和東",
+     "trade_price_man_yen_median": 1750,
+     "trade_price_man_yen_min": 870,
+     "trade_price_man_yen_max": 2400,
+     "area_m2_median": 52.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|二和西",
+     "name": "船橋市 二和西",
+     "point": {
+      "lat": 35.74271,
+      "lng": 140.00946
+     },
+     "municipality": "船橋市",
+     "district_name": "二和西",
+     "trade_price_man_yen_median": 500,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 500,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|二子町",
+     "name": "船橋市 二子町",
+     "point": {
+      "lat": 35.70986,
+      "lng": 139.94818
+     },
+     "municipality": "船橋市",
+     "district_name": "二子町",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 2300,
+     "trade_price_man_yen_max": 3800,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 13
+    },
+    {
+     "id": "船橋市|二宮",
+     "name": "船橋市 二宮",
+     "point": {
+      "lat": 35.70821,
+      "lng": 140.02753
+     },
+     "municipality": "船橋市",
+     "district_name": "二宮",
+     "trade_price_man_yen_median": 1850,
+     "trade_price_man_yen_min": 1400,
+     "trade_price_man_yen_max": 2400,
+     "area_m2_median": 72.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "船橋市|前原東",
+     "name": "船橋市 前原東",
+     "point": {
+      "lat": 35.69194,
+      "lng": 140.02618
+     },
+     "municipality": "船橋市",
+     "district_name": "前原東",
+     "trade_price_man_yen_median": 3400,
+     "trade_price_man_yen_min": 550,
+     "trade_price_man_yen_max": 8100,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 12
+    },
+    {
+     "id": "船橋市|前原西",
+     "name": "船橋市 前原西",
+     "point": {
+      "lat": 35.69535,
+      "lng": 140.01238
+     },
+     "municipality": "船橋市",
+     "district_name": "前原西",
+     "trade_price_man_yen_median": 3050,
+     "trade_price_man_yen_min": 720,
+     "trade_price_man_yen_max": 5600,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 42
+    },
+    {
+     "id": "船橋市|前貝塚町",
+     "name": "船橋市 前貝塚町",
+     "point": {
+      "lat": 35.72671,
+      "lng": 139.97893
+     },
+     "municipality": "船橋市",
+     "district_name": "前貝塚町",
+     "trade_price_man_yen_median": 4000,
+     "trade_price_man_yen_min": 4000,
+     "trade_price_man_yen_max": 4000,
+     "area_m2_median": 80,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|北本町",
+     "name": "船橋市 北本町",
+     "point": {
+      "lat": 35.71037,
+      "lng": 139.98204
+     },
+     "municipality": "船橋市",
+     "district_name": "北本町",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 7500,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 46
+    },
+    {
+     "id": "船橋市|南三咲",
+     "name": "船橋市 南三咲",
+     "point": {
+      "lat": 35.73348,
+      "lng": 140.02269
+     },
+     "municipality": "船橋市",
+     "district_name": "南三咲",
+     "trade_price_man_yen_median": 980,
+     "trade_price_man_yen_min": 280,
+     "trade_price_man_yen_max": 2900,
+     "area_m2_median": 55,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 7
+    },
+    {
+     "id": "船橋市|印内",
+     "name": "船橋市 印内",
+     "point": {
+      "lat": 35.71423,
+      "lng": 139.95989
+     },
+     "municipality": "船橋市",
+     "district_name": "印内",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 4200,
+     "area_m2_median": 72.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 10
+    },
+    {
+     "id": "船橋市|印内町",
+     "name": "船橋市 印内町",
+     "point": {
+      "lat": 35.70539,
+      "lng": 139.9585
+     },
+     "municipality": "船橋市",
+     "district_name": "印内町",
+     "trade_price_man_yen_median": 3600,
+     "trade_price_man_yen_min": 2600,
+     "trade_price_man_yen_max": 4600,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|古作",
+     "name": "船橋市 古作",
+     "point": {
+      "lat": 35.72488,
+      "lng": 139.96458
+     },
+     "municipality": "船橋市",
+     "district_name": "古作",
+     "trade_price_man_yen_median": 2400,
+     "trade_price_man_yen_min": 2400,
+     "trade_price_man_yen_max": 2400,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|咲が丘",
+     "name": "船橋市 咲が丘",
+     "point": {
+      "lat": 35.7595,
+      "lng": 140.01715
+     },
+     "municipality": "船橋市",
+     "district_name": "咲が丘",
+     "trade_price_man_yen_median": 1600,
+     "trade_price_man_yen_min": 1600,
+     "trade_price_man_yen_max": 1600,
+     "area_m2_median": 75,
+     "structure_mode": null,
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|坪井東",
+     "name": "船橋市 坪井東",
+     "point": {
+      "lat": 35.72813,
+      "lng": 140.05765
+     },
+     "municipality": "船橋市",
+     "district_name": "坪井東",
+     "trade_price_man_yen_median": 3700,
+     "trade_price_man_yen_min": 3500,
+     "trade_price_man_yen_max": 4300,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|夏見",
+     "name": "船橋市 夏見",
+     "point": {
+      "lat": 35.70792,
+      "lng": 139.98927
+     },
+     "municipality": "船橋市",
+     "district_name": "夏見",
+     "trade_price_man_yen_median": 2800,
+     "trade_price_man_yen_min": 950,
+     "trade_price_man_yen_max": 5000,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 27
+    },
+    {
+     "id": "船橋市|夏見台",
+     "name": "船橋市 夏見台",
+     "point": {
+      "lat": 35.71837,
+      "lng": 139.99252
+     },
+     "municipality": "船橋市",
+     "district_name": "夏見台",
+     "trade_price_man_yen_median": 990,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 3100,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 25
+    },
+    {
+     "id": "船橋市|大穴南",
+     "name": "船橋市 大穴南",
+     "point": {
+      "lat": 35.74098,
+      "lng": 140.03177
+     },
+     "municipality": "船橋市",
+     "district_name": "大穴南",
+     "trade_price_man_yen_median": 670,
+     "trade_price_man_yen_min": 670,
+     "trade_price_man_yen_max": 670,
+     "area_m2_median": 30,
+     "structure_mode": "木造",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|宮本",
+     "name": "船橋市 宮本",
+     "point": {
+      "lat": 35.69872,
+      "lng": 139.99199
+     },
+     "municipality": "船橋市",
+     "district_name": "宮本",
+     "trade_price_man_yen_median": 2600,
+     "trade_price_man_yen_min": 820,
+     "trade_price_man_yen_max": 6700,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 25
+    },
+    {
+     "id": "船橋市|小室町",
+     "name": "船橋市 小室町",
+     "point": {
+      "lat": 35.79073,
+      "lng": 140.07529
+     },
+     "municipality": "船橋市",
+     "district_name": "小室町",
+     "trade_price_man_yen_median": 685,
+     "trade_price_man_yen_min": 290,
+     "trade_price_man_yen_max": 2400,
+     "area_m2_median": 55,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|山手",
+     "name": "船橋市 山手",
+     "point": {
+      "lat": 35.71314,
+      "lng": 139.97722
+     },
+     "municipality": "船橋市",
+     "district_name": "山手",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 150,
+     "trade_price_man_yen_max": 4500,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 15
+    },
+    {
+     "id": "船橋市|山野町",
+     "name": "船橋市 山野町",
+     "point": {
+      "lat": 35.70445,
+      "lng": 139.96257
+     },
+     "municipality": "船橋市",
+     "district_name": "山野町",
+     "trade_price_man_yen_median": 4250,
+     "trade_price_man_yen_min": 1400,
+     "trade_price_man_yen_max": 5000,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 10
+    },
+    {
+     "id": "船橋市|市場",
+     "name": "船橋市 市場",
+     "point": {
+      "lat": 35.70348,
+      "lng": 139.99289
+     },
+     "municipality": "船橋市",
+     "district_name": "市場",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 1400,
+     "trade_price_man_yen_max": 5400,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 11
+    },
+    {
+     "id": "船橋市|旭町",
+     "name": "船橋市 旭町",
+     "point": {
+      "lat": 35.73129,
+      "lng": 139.98485
+     },
+     "municipality": "船橋市",
+     "district_name": "旭町",
+     "trade_price_man_yen_median": 1700,
+     "trade_price_man_yen_min": 500,
+     "trade_price_man_yen_max": 3000,
+     "area_m2_median": 57.5,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "船橋市|本中山",
+     "name": "船橋市 本中山",
+     "point": {
+      "lat": 35.71637,
+      "lng": 139.94504
+     },
+     "municipality": "船橋市",
+     "district_name": "本中山",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 1000,
+     "trade_price_man_yen_max": 6800,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 25
+    },
+    {
+     "id": "船橋市|本町",
+     "name": "船橋市 本町",
+     "point": {
+      "lat": 35.70004,
+      "lng": 139.98348
+     },
+     "municipality": "船橋市",
+     "district_name": "本町",
+     "trade_price_man_yen_median": 4900,
+     "trade_price_man_yen_min": 430,
+     "trade_price_man_yen_max": 8500,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 47
+    },
+    {
+     "id": "船橋市|本郷町",
+     "name": "船橋市 本郷町",
+     "point": {
+      "lat": 35.70791,
+      "lng": 139.95209
+     },
+     "municipality": "船橋市",
+     "district_name": "本郷町",
+     "trade_price_man_yen_median": 3350,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 4800,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 16
+    },
+    {
+     "id": "船橋市|東中山",
+     "name": "船橋市 東中山",
+     "point": {
+      "lat": 35.7128,
+      "lng": 139.95024
+     },
+     "municipality": "船橋市",
+     "district_name": "東中山",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 1300,
+     "trade_price_man_yen_max": 6300,
+     "area_m2_median": 62.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|東船橋",
+     "name": "船橋市 東船橋",
+     "point": {
+      "lat": 35.69826,
+      "lng": 140.00168
+     },
+     "municipality": "船橋市",
+     "district_name": "東船橋",
+     "trade_price_man_yen_median": 2000,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 2700,
+     "area_m2_median": 75,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|栄町",
+     "name": "船橋市 栄町",
+     "point": {
+      "lat": 35.69254,
+      "lng": 139.9751
+     },
+     "municipality": "船橋市",
+     "district_name": "栄町",
+     "trade_price_man_yen_median": 2150,
+     "trade_price_man_yen_min": 2000,
+     "trade_price_man_yen_max": 3700,
+     "area_m2_median": 70,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 4
+    },
+    {
+     "id": "船橋市|浜町",
+     "name": "船橋市 浜町",
+     "point": {
+      "lat": 35.69016,
+      "lng": 139.99005
+     },
+     "municipality": "船橋市",
+     "district_name": "浜町",
+     "trade_price_man_yen_median": 4600,
+     "trade_price_man_yen_min": 700,
+     "trade_price_man_yen_max": 15000,
+     "area_m2_median": 70,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 24
+    },
+    {
+     "id": "船橋市|海神",
+     "name": "船橋市 海神",
+     "point": {
+      "lat": 35.70018,
+      "lng": 139.97853
+     },
+     "municipality": "船橋市",
+     "district_name": "海神",
+     "trade_price_man_yen_median": 3800,
+     "trade_price_man_yen_min": 390,
+     "trade_price_man_yen_max": 6500,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 15
+    },
+    {
+     "id": "船橋市|海神町",
+     "name": "船橋市 海神町",
+     "point": {
+      "lat": 35.69896,
+      "lng": 139.97376
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町",
+     "trade_price_man_yen_median": 1800,
+     "trade_price_man_yen_min": 900,
+     "trade_price_man_yen_max": 4300,
+     "area_m2_median": 60,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 18
+    },
+    {
+     "id": "船橋市|海神町南",
+     "name": "船橋市 海神町南",
+     "point": {
+      "lat": 35.70071,
+      "lng": 139.96698
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町南",
+     "trade_price_man_yen_median": 2650,
+     "trade_price_man_yen_min": 1800,
+     "trade_price_man_yen_max": 4900,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 24
+    },
+    {
+     "id": "船橋市|海神町東",
+     "name": "船橋市 海神町東",
+     "point": {
+      "lat": 35.70171,
+      "lng": 139.97191
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町東",
+     "trade_price_man_yen_median": 2700,
+     "trade_price_man_yen_min": 2400,
+     "trade_price_man_yen_max": 3500,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|海神町西",
+     "name": "船橋市 海神町西",
+     "point": {
+      "lat": 35.7029,
+      "lng": 139.96756
+     },
+     "municipality": "船橋市",
+     "district_name": "海神町西",
+     "trade_price_man_yen_median": 3100,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 4900,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|湊町",
+     "name": "船橋市 湊町",
+     "point": {
+      "lat": 35.69291,
+      "lng": 139.98601
+     },
+     "municipality": "船橋市",
+     "district_name": "湊町",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 560,
+     "trade_price_man_yen_max": 6400,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 18
+    },
+    {
+     "id": "船橋市|滝台",
+     "name": "船橋市 滝台",
+     "point": {
+      "lat": 35.70567,
+      "lng": 140.03546
+     },
+     "municipality": "船橋市",
+     "district_name": "滝台",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 2600,
+     "trade_price_man_yen_max": 3200,
+     "area_m2_median": 72.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|田喜野井",
+     "name": "船橋市 田喜野井",
+     "point": {
+      "lat": 35.69776,
+      "lng": 140.03928
+     },
+     "municipality": "船橋市",
+     "district_name": "田喜野井",
+     "trade_price_man_yen_median": 1400,
+     "trade_price_man_yen_min": 260,
+     "trade_price_man_yen_max": 2300,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 9
+    },
+    {
+     "id": "船橋市|緑台",
+     "name": "船橋市 緑台",
+     "point": {
+      "lat": 35.72776,
+      "lng": 140.01761
+     },
+     "municipality": "船橋市",
+     "district_name": "緑台",
+     "trade_price_man_yen_median": 780,
+     "trade_price_man_yen_min": 270,
+     "trade_price_man_yen_max": 4500,
+     "area_m2_median": 60,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 17
+    },
+    {
+     "id": "船橋市|習志野",
+     "name": "船橋市 習志野",
+     "point": {
+      "lat": 35.71162,
+      "lng": 140.05592
+     },
+     "municipality": "船橋市",
+     "district_name": "習志野",
+     "trade_price_man_yen_median": 1400,
+     "trade_price_man_yen_min": 890,
+     "trade_price_man_yen_max": 2300,
+     "area_m2_median": 80,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|習志野台",
+     "name": "船橋市 習志野台",
+     "point": {
+      "lat": 35.72591,
+      "lng": 140.03839
+     },
+     "municipality": "船橋市",
+     "district_name": "習志野台",
+     "trade_price_man_yen_median": 2400,
+     "trade_price_man_yen_min": 300,
+     "trade_price_man_yen_max": 4800,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 70
+    },
+    {
+     "id": "船橋市|芝山",
+     "name": "船橋市 芝山",
+     "point": {
+      "lat": 35.71528,
+      "lng": 140.01759
+     },
+     "municipality": "船橋市",
+     "district_name": "芝山",
+     "trade_price_man_yen_median": 975,
+     "trade_price_man_yen_min": 420,
+     "trade_price_man_yen_max": 2500,
+     "area_m2_median": 45,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 8
+    },
+    {
+     "id": "船橋市|若松",
+     "name": "船橋市 若松",
+     "point": {
+      "lat": 35.6845,
+      "lng": 139.99686
+     },
+     "municipality": "船橋市",
+     "district_name": "若松",
+     "trade_price_man_yen_median": 1800,
+     "trade_price_man_yen_min": 1500,
+     "trade_price_man_yen_max": 8400,
+     "area_m2_median": 45,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 10
+    },
+    {
+     "id": "船橋市|葛飾町",
+     "name": "船橋市 葛飾町",
+     "point": {
+      "lat": 35.70628,
+      "lng": 139.95615
+     },
+     "municipality": "船橋市",
+     "district_name": "葛飾町",
+     "trade_price_man_yen_median": 3300,
+     "trade_price_man_yen_min": 2000,
+     "trade_price_man_yen_max": 4600,
+     "area_m2_median": 52.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|薬円台",
+     "name": "船橋市 薬円台",
+     "point": {
+      "lat": 35.70828,
+      "lng": 140.041
+     },
+     "municipality": "船橋市",
+     "district_name": "薬円台",
+     "trade_price_man_yen_median": 2050,
+     "trade_price_man_yen_min": 580,
+     "trade_price_man_yen_max": 3000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 14
+    },
+    {
+     "id": "船橋市|藤原",
+     "name": "船橋市 藤原",
+     "point": {
+      "lat": 35.73135,
+      "lng": 139.9639
+     },
+     "municipality": "船橋市",
+     "district_name": "藤原",
+     "trade_price_man_yen_median": 2200,
+     "trade_price_man_yen_min": 200,
+     "trade_price_man_yen_max": 4000,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 26
+    },
+    {
+     "id": "船橋市|行田",
+     "name": "船橋市 行田",
+     "point": {
+      "lat": 35.72093,
+      "lng": 139.97884
+     },
+     "municipality": "船橋市",
+     "district_name": "行田",
+     "trade_price_man_yen_median": 3200,
+     "trade_price_man_yen_min": 620,
+     "trade_price_man_yen_max": 5600,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 23
+    },
+    {
+     "id": "船橋市|行田町",
+     "name": "船橋市 行田町",
+     "point": {
+      "lat": 35.72429,
+      "lng": 139.97475
+     },
+     "municipality": "船橋市",
+     "district_name": "行田町",
+     "trade_price_man_yen_median": 4200,
+     "trade_price_man_yen_min": 4000,
+     "trade_price_man_yen_max": 5900,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 3
+    },
+    {
+     "id": "船橋市|西習志野",
+     "name": "船橋市 西習志野",
+     "point": {
+      "lat": 35.72382,
+      "lng": 140.03299
+     },
+     "municipality": "船橋市",
+     "district_name": "西習志野",
+     "trade_price_man_yen_median": 1650,
+     "trade_price_man_yen_min": 1100,
+     "trade_price_man_yen_max": 2100,
+     "area_m2_median": 67.5,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 6
+    },
+    {
+     "id": "船橋市|西船",
+     "name": "船橋市 西船",
+     "point": {
+      "lat": 35.7072,
+      "lng": 139.96545
+     },
+     "municipality": "船橋市",
+     "district_name": "西船",
+     "trade_price_man_yen_median": 3300,
+     "trade_price_man_yen_min": 800,
+     "trade_price_man_yen_max": 5400,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 29
+    },
+    {
+     "id": "船橋市|金杉",
+     "name": "船橋市 金杉",
+     "point": {
+      "lat": 35.72669,
+      "lng": 140.00093
+     },
+     "municipality": "船橋市",
+     "district_name": "金杉",
+     "trade_price_man_yen_median": 1900,
+     "trade_price_man_yen_min": 1700,
+     "trade_price_man_yen_max": 2100,
+     "area_m2_median": 67.5,
+     "structure_mode": "ＳＲＣ",
+     "transaction_count": 2
+    },
+    {
+     "id": "船橋市|金杉台",
+     "name": "船橋市 金杉台",
+     "point": {
+      "lat": 35.73623,
+      "lng": 140.01051
+     },
+     "municipality": "船橋市",
+     "district_name": "金杉台",
+     "trade_price_man_yen_median": 305,
+     "trade_price_man_yen_min": 65,
+     "trade_price_man_yen_max": 770,
+     "area_m2_median": 45,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 20
+    },
+    {
+     "id": "船橋市|飯山満町",
+     "name": "船橋市 飯山満町",
+     "point": {
+      "lat": 35.71277,
+      "lng": 140.01086
+     },
+     "municipality": "船橋市",
+     "district_name": "飯山満町",
+     "trade_price_man_yen_median": 1800,
+     "trade_price_man_yen_min": 300,
+     "trade_price_man_yen_max": 2700,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 30
+    },
+    {
+     "id": "船橋市|高根台",
+     "name": "船橋市 高根台",
+     "point": {
+      "lat": 35.73144,
+      "lng": 140.03023
+     },
+     "municipality": "船橋市",
+     "district_name": "高根台",
+     "trade_price_man_yen_median": 2900,
+     "trade_price_man_yen_min": 230,
+     "trade_price_man_yen_max": 4900,
+     "area_m2_median": 65,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 30
+    },
+    {
+     "id": "船橋市|高瀬町",
+     "name": "船橋市 高瀬町",
+     "point": {
+      "lat": 35.67117,
+      "lng": 139.99344
+     },
+     "municipality": "船橋市",
+     "district_name": "高瀬町",
+     "trade_price_man_yen_median": 4300,
+     "trade_price_man_yen_min": 4300,
+     "trade_price_man_yen_max": 4300,
+     "area_m2_median": 70,
+     "structure_mode": "ＲＣ",
+     "transaction_count": 1
+    },
+    {
+     "id": "船橋市|高野台",
+     "name": "船橋市 高野台",
+     "point": {
+      "lat": 35.765,
+      "lng": 140.02631
+     },
+     "municipality": "船橋市",
+     "district_name": "高野台",
+     "trade_price_man_yen_median": 1200,
+     "trade_price_man_yen_min": 1200,
+     "trade_price_man_yen_max": 1200,
+     "area_m2_median": 87.5,
+     "structure_mode": null,
+     "transaction_count": 2
+    }
+   ]
+  }
+ }
+}

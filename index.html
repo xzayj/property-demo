@@ -183,6 +183,195 @@
       color: #333;
     }
 
+    /* 表示切替（地区 / エリア試作） */
+    #mode-toggle {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      z-index: 12;
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      overflow: hidden;
+    }
+    #mode-toggle button {
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #1a237e;
+      background: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    #mode-toggle button[aria-pressed="true"] { background: #1a237e; color: #fff; }
+    #mode-toggle button:disabled { color: #999; cursor: not-allowed; }
+    .proto-tag {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 0 5px;
+      border-radius: 3px;
+      background: #ffca28;
+      color: #1a237e;
+      font-size: 0.68rem;
+      font-weight: bold;
+    }
+
+    /* エリア表示のマーカー（色に加えてエリア記号の文字でも区別する） */
+    .area-marker {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: bold;
+      line-height: 1;
+      transition: opacity 0.15s;
+    }
+    .area-marker.dimmed { opacity: 0.3; }
+    .area-marker.picked { border-color: #111; }
+
+    .area-legend-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+      margin-bottom: 3px;
+      padding: 3px 4px;
+      font: inherit;
+      color: #333;
+      text-align: left;
+      background: none;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .area-legend-row:hover { background: #eef0fa; }
+    .area-legend-row[aria-pressed="true"] { border-color: #1a237e; background: #eef0fa; }
+    .area-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    #legend .legend-note {
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px solid #ddd;
+      color: #555;
+      font-size: 0.7rem;
+      line-height: 1.5;
+      max-width: 210px;
+    }
+
+    /* エリアの説明パネル */
+    #area-panel {
+      position: absolute;
+      top: 56px;
+      left: 12px;
+      width: 340px;
+      max-height: calc(100% - 56px - 40px);
+      overflow-y: auto;
+      z-index: 20;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      padding: 14px 16px 12px;
+      color: #222;
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+    #area-panel[hidden] { display: none; }
+    #area-panel .panel-proto {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: 4px;
+      background: #ffca28;
+      color: #1a237e;
+      font-size: 0.72rem;
+      font-weight: bold;
+    }
+    #area-panel h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0 2px;
+      padding-right: 34px;
+      font-size: 1rem;
+      color: #1a237e;
+    }
+    #area-panel h3 small { font-size: 0.78rem; font-weight: normal; color: #555; }
+    #area-panel .picked-district { color: #555; font-size: 0.76rem; margin-bottom: 6px; }
+    #area-panel .area-text { margin: 6px 0 10px; font-size: 0.9rem; }
+    #area-panel .check-summary {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    #area-panel .check-summary.all-match { background: #e8f5e9; color: #1b5e20; }
+    #area-panel .check-summary.has-mismatch { background: #fff3e0; color: #b23c00; }
+    #area-panel details { margin-top: 8px; }
+    #area-panel summary { cursor: pointer; color: #1a237e; font-weight: bold; font-size: 0.8rem; }
+    #area-panel .claim-list { list-style: none; margin-top: 4px; }
+    #area-panel .claim-list li {
+      display: flex;
+      gap: 6px;
+      padding: 4px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.78rem;
+    }
+    #area-panel .claim-list .mark { flex-shrink: 0; width: 3.6em; font-weight: bold; }
+    #area-panel .claim-list .match .mark { color: #1b5e20; }
+    #area-panel .claim-list .mismatch .mark,
+    #area-panel .claim-list .unsupported .mark { color: #b23c00; }
+    #area-panel .claim-list small { display: block; color: #666; }
+    #area-panel table { width: 100%; border-collapse: collapse; margin-top: 4px; font-size: 0.78rem; }
+    #area-panel th, #area-panel td { padding: 3px 4px; border-bottom: 1px solid #eee; text-align: right; }
+    #area-panel th:first-child, #area-panel td:first-child { text-align: left; }
+    #area-panel th { color: #666; font-weight: normal; }
+    #area-panel .member-list { margin-top: 4px; font-size: 0.78rem; color: #444; }
+    #area-panel .panel-foot { margin-top: 10px; color: #666; font-size: 0.7rem; line-height: 1.5; }
+    #area-panel-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 50%;
+      background: #eee;
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      /* スマホでは下からのシートにして、地図の上半分を見えるまま残す */
+      #area-panel {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        max-height: 58%;
+        border-radius: 12px 12px 0 0;
+      }
+    }
+
     /* 背景地図の出典（地理院タイル）。下端の #data-note に重ならないよう上にずらし、前面に出す */
     .maplibregl-ctrl-bottom-right {
       bottom: 22px;
@@ -323,6 +512,7 @@
         <li>エリアの特徴を文章で説明する</li>
         <li>その文章がデータと合っているかを自動検証する</li>
       </ol>
+      <p>①〜③の試作版を、地図左上の「エリア表示」で確認できます（試作段階・手法は検討中）。</p>
 
       <p class="about-finding"><strong>現時点でわかったこと：</strong>津田沼駅2km圏内でも、価格上位の地区群と下位の地区群で㎡単価に約2.3倍の差があり、価格のばらつきの約半分は「どの地区か」で説明できます。<small>（中古マンション取引の分析）</small></p>
 
@@ -333,11 +523,22 @@
   <main>
     <div id="map"></div>
 
+    <div id="mode-toggle" role="group" aria-label="表示の切替">
+      <button type="button" data-mode="district" aria-pressed="true">地区表示</button>
+      <button type="button" data-mode="area" aria-pressed="false" disabled>エリア表示<span class="proto-tag">試作</span></button>
+    </div>
+
+    <div id="area-panel" hidden>
+      <button type="button" id="area-panel-close" aria-label="閉じる">×</button>
+      <div id="area-panel-body"></div>
+    </div>
+
     <div id="data-note">このサービスは、国土交通省不動産情報ライブラリのAPI機能を使用していますが、提供情報の最新性、正確性、完全性等が保証されたものではありません。</div>
 
     <div id="legend">
-      <h4>取引価格の目安（地区中央値）</h4>
+      <h4 id="legend-title">取引価格の目安（地区中央値）</h4>
       <div id="legend-items"></div>
+      <div id="area-legend-note" class="legend-note" hidden></div>
       <div id="type-filter">
         <label><input type="radio" name="type-filter" value="all" checked> すべての取引</label>
         <label><input type="radio" name="type-filter" value="中古マンション等"> 中古マンション等のみ</label>

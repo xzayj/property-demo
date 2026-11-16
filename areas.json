@@ -1,0 +1,853 @@
+{
+ "status": "試作段階・手法は検討中",
+ "data": {
+  "fetched_at": "2026-11-12",
+  "periods": [
+   "2025Q3",
+   "2025Q2",
+   "2025Q1",
+   "2024Q4",
+   "2024Q3",
+   "2024Q2",
+   "2024Q1",
+   "2023Q4"
+  ],
+  "type": "中古マンション等",
+  "min_records_per_district": 5,
+  "n_districts": 53,
+  "n_records": 1037
+ },
+ "generation": {
+  "date": "2026-11-16",
+  "model": "Claude Fable 5.2（モデルID: claude-fable-5-2）"
+ },
+ "k_selection": {
+  "chosen_k": 4,
+  "candidates": [
+   {
+    "k": 4,
+    "silhouette": 0.11738813053553007,
+    "area_sizes": [
+     23,
+     22,
+     7,
+     1
+    ]
+   },
+   {
+    "k": 5,
+    "silhouette": 0.10217236891633907,
+    "area_sizes": [
+     23,
+     21,
+     7,
+     1,
+     1
+    ]
+   },
+   {
+    "k": 6,
+    "silhouette": 0.10340650797885953,
+    "area_sizes": [
+     21,
+     20,
+     7,
+     3,
+     1,
+     1
+    ]
+   }
+  ]
+ },
+ "index_variables": [
+  {
+   "key": "unit_price",
+   "label": "㎡単価",
+   "unit": "万円/㎡"
+  },
+  {
+   "key": "age",
+   "label": "築年数",
+   "unit": "年"
+  },
+  {
+   "key": "area_m2",
+   "label": "面積",
+   "unit": "㎡"
+  }
+ ],
+ "overall": {
+  "unit_price": 38.46153846153846,
+  "age": 28.0,
+  "area_m2": 65.0
+ },
+ "verification_summary": {
+  "n_claims": 31,
+  "n_match": 31,
+  "n_mismatch": 0,
+  "n_unsupported": 0
+ },
+ "areas": [
+  {
+   "id": "A",
+   "n_districts": 1,
+   "n_records": 34,
+   "districts": [
+    "習志野市 奏の杜"
+   ],
+   "values": {
+    "unit_price": 104.28571428571429,
+    "age": 10.0,
+    "area_m2": 70.0
+   },
+   "index": {
+    "unit_price": 271.1,
+    "age": 35.7,
+    "area_m2": 107.7
+   },
+   "text": "奏の杜の1地区だけからなるエリアです。㎡単価は全体の約2.7倍で4エリア中もっとも高く、築年数は全体より短く、4エリア中もっとも新しい物件が取引されています。面積は全体よりやや広めです。",
+   "verification": {
+    "n_claims": 7,
+    "n_match": 7,
+    "claims": [
+     {
+      "label": "地区数：1地区",
+      "rule": "エリアの地区数が、主張の値と一致",
+      "observed": "1地区",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：習志野市 奏の杜 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：全体の約2.7倍",
+      "rule": "指標÷100 を小数第1位に丸めた値が、主張の値と一致",
+      "observed": "指標 271.1（2.71倍）",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：全エリア中もっとも高い",
+      "rule": "自エリアの指標が、他のすべてのエリアより厳密に大きい / 小さい（同値があれば不一致）",
+      "observed": "指標 271.1／他エリアは 36.4, 88.2, 122.6",
+      "verdict": "match"
+     },
+     {
+      "label": "築年数：全体より低い",
+      "rule": "指標 < 80",
+      "observed": "指標 35.7",
+      "verdict": "match"
+     },
+     {
+      "label": "築年数：全エリア中もっとも低い",
+      "rule": "自エリアの指標が、他のすべてのエリアより厳密に大きい / 小さい（同値があれば不一致）",
+      "observed": "指標 35.7／他エリアは 92.9, 100.0, 182.1",
+      "verdict": "match"
+     },
+     {
+      "label": "面積：全体よりやや高い",
+      "rule": "105 < 指標 ≤ 120",
+      "observed": "指標 107.7",
+      "verdict": "match"
+     }
+    ]
+   }
+  },
+  {
+   "id": "B",
+   "n_districts": 22,
+   "n_records": 446,
+   "districts": [
+    "船橋市 本町",
+    "船橋市 北本町",
+    "船橋市 西船",
+    "船橋市 夏見",
+    "船橋市 藤原",
+    "船橋市 宮本",
+    "船橋市 本中山",
+    "船橋市 浜町",
+    "船橋市 海神町南",
+    "船橋市 行田",
+    "船橋市 海神町",
+    "船橋市 湊町",
+    "船橋市 本郷町",
+    "船橋市 山手",
+    "船橋市 海神",
+    "船橋市 二子町",
+    "船橋市 市場",
+    "船橋市 印内",
+    "船橋市 山野町",
+    "船橋市 若松",
+    "船橋市 東中山",
+    "船橋市 上山町"
+   ],
+   "values": {
+    "unit_price": 47.142857142857146,
+    "age": 26.0,
+    "area_m2": 65.0
+   },
+   "index": {
+    "unit_price": 122.6,
+    "age": 92.9,
+    "area_m2": 100.0
+   },
+   "text": "船橋市の本町・北本町・西船など22地区からなるエリアです。㎡単価は全体より高く、築年数は全体よりやや短めです。面積は全体と同じ水準です。",
+   "verification": {
+    "n_claims": 7,
+    "n_match": 7,
+    "claims": [
+     {
+      "label": "地区数：22地区",
+      "rule": "エリアの地区数が、主張の値と一致",
+      "observed": "22地区",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 本町 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 北本町 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 西船 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：全体より高い",
+      "rule": "指標 > 120",
+      "observed": "指標 122.6",
+      "verdict": "match"
+     },
+     {
+      "label": "築年数：全体よりやや低い",
+      "rule": "80 ≤ 指標 < 95",
+      "observed": "指標 92.9",
+      "verdict": "match"
+     },
+     {
+      "label": "面積：全体と同じ水準",
+      "rule": "95 ≤ 指標 ≤ 105",
+      "observed": "指標 100.0",
+      "verdict": "match"
+     }
+    ]
+   }
+  },
+  {
+   "id": "C",
+   "n_districts": 23,
+   "n_records": 466,
+   "districts": [
+    "船橋市 習志野台",
+    "習志野市 谷津",
+    "船橋市 前原西",
+    "習志野市 東習志野",
+    "船橋市 飯山満町",
+    "船橋市 高根台",
+    "習志野市 秋津",
+    "習志野市 津田沼",
+    "習志野市 大久保",
+    "船橋市 薬円台",
+    "習志野市 袖ケ浦",
+    "船橋市 前原東",
+    "習志野市 実籾",
+    "船橋市 中野木",
+    "船橋市 田喜野井",
+    "船橋市 三山",
+    "習志野市 屋敷",
+    "習志野市 本大久保",
+    "習志野市 藤崎",
+    "習志野市 香澄",
+    "船橋市 二宮",
+    "船橋市 西習志野",
+    "習志野市 谷津町"
+   ],
+   "values": {
+    "unit_price": 33.92307692307692,
+    "age": 28.0,
+    "area_m2": 70.0
+   },
+   "index": {
+    "unit_price": 88.2,
+    "age": 100.0,
+    "area_m2": 107.7
+   },
+   "text": "習志野台・谷津・前原西など、習志野市と船橋市にまたがる23地区からなるエリアです。㎡単価は全体よりやや低く、エリアBよりも低い水準です。築年数は全体と同じ水準で、面積は全体よりやや広めです。",
+   "verification": {
+    "n_claims": 8,
+    "n_match": 8,
+    "claims": [
+     {
+      "label": "地区数：23地区",
+      "rule": "エリアの地区数が、主張の値と一致",
+      "observed": "23地区",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 習志野台 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：習志野市 谷津 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 前原西 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：全体よりやや低い",
+      "rule": "80 ≤ 指標 < 95",
+      "observed": "指標 88.2",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：エリアBより低い",
+      "rule": "自エリアの指標が、エリアXの指標より厳密に大きい / 小さい",
+      "observed": "指標 88.2／エリアBは 122.6",
+      "verdict": "match"
+     },
+     {
+      "label": "築年数：全体と同じ水準",
+      "rule": "95 ≤ 指標 ≤ 105",
+      "observed": "指標 100.0",
+      "verdict": "match"
+     },
+     {
+      "label": "面積：全体よりやや高い",
+      "rule": "105 < 指標 ≤ 120",
+      "observed": "指標 107.7",
+      "verdict": "match"
+     }
+    ]
+   }
+  },
+  {
+   "id": "D",
+   "n_districts": 7,
+   "n_records": 91,
+   "districts": [
+    "船橋市 夏見台",
+    "船橋市 金杉台",
+    "船橋市 緑台",
+    "船橋市 小室町",
+    "船橋市 芝山",
+    "船橋市 南三咲",
+    "船橋市 旭町"
+   ],
+   "values": {
+    "unit_price": 14.0,
+    "age": 51.0,
+    "area_m2": 55.0
+   },
+   "index": {
+    "unit_price": 36.4,
+    "age": 182.1,
+    "area_m2": 84.6
+   },
+   "text": "夏見台・金杉台・緑台など船橋市の7地区からなるエリアです。㎡単価は全体の約0.4倍で4エリア中もっとも低く、築年数は全体の約1.8倍と長く、4エリア中もっとも古い物件が取引されています。面積は全体よりやや狭めです。",
+   "verification": {
+    "n_claims": 9,
+    "n_match": 9,
+    "claims": [
+     {
+      "label": "地区数：7地区",
+      "rule": "エリアの地区数が、主張の値と一致",
+      "observed": "7地区",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 夏見台 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 金杉台 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "所属地区：船橋市 緑台 を含む",
+      "rule": "主張の地区名が、エリアの所属地区に含まれる",
+      "observed": "含む",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：全体の約0.4倍",
+      "rule": "指標÷100 を小数第1位に丸めた値が、主張の値と一致",
+      "observed": "指標 36.4（0.36倍）",
+      "verdict": "match"
+     },
+     {
+      "label": "㎡単価：全エリア中もっとも低い",
+      "rule": "自エリアの指標が、他のすべてのエリアより厳密に大きい / 小さい（同値があれば不一致）",
+      "observed": "指標 36.4／他エリアは 88.2, 122.6, 271.1",
+      "verdict": "match"
+     },
+     {
+      "label": "築年数：全体の約1.8倍",
+      "rule": "指標÷100 を小数第1位に丸めた値が、主張の値と一致",
+      "observed": "指標 182.1（1.82倍）",
+      "verdict": "match"
+     },
+     {
+      "label": "築年数：全エリア中もっとも高い",
+      "rule": "自エリアの指標が、他のすべてのエリアより厳密に大きい / 小さい（同値があれば不一致）",
+      "observed": "指標 182.1／他エリアは 35.7, 92.9, 100.0",
+      "verdict": "match"
+     },
+     {
+      "label": "面積：全体よりやや低い",
+      "rule": "80 ≤ 指標 < 95",
+      "observed": "指標 84.6",
+      "verdict": "match"
+     }
+    ]
+   }
+  }
+ ],
+ "districts": [
+  {
+   "name": "習志野市 大久保",
+   "area_id": "C",
+   "lat": 35.68792,
+   "lng": 140.04724,
+   "n": 25,
+   "unit_price_median": 35.6
+  },
+  {
+   "name": "習志野市 奏の杜",
+   "area_id": "A",
+   "lat": 35.69138,
+   "lng": 140.01363,
+   "n": 34,
+   "unit_price_median": 104.3
+  },
+  {
+   "name": "習志野市 実籾",
+   "area_id": "C",
+   "lat": 35.68807,
+   "lng": 140.06583,
+   "n": 9,
+   "unit_price_median": 38.3
+  },
+  {
+   "name": "習志野市 屋敷",
+   "area_id": "C",
+   "lat": 35.67785,
+   "lng": 140.05444,
+   "n": 7,
+   "unit_price_median": 36.2
+  },
+  {
+   "name": "習志野市 本大久保",
+   "area_id": "C",
+   "lat": 35.68545,
+   "lng": 140.0406,
+   "n": 6,
+   "unit_price_median": 29.2
+  },
+  {
+   "name": "習志野市 東習志野",
+   "area_id": "C",
+   "lat": 35.69549,
+   "lng": 140.06572,
+   "n": 40,
+   "unit_price_median": 33.5
+  },
+  {
+   "name": "習志野市 津田沼",
+   "area_id": "C",
+   "lat": 35.68905,
+   "lng": 140.02499,
+   "n": 26,
+   "unit_price_median": 41.3
+  },
+  {
+   "name": "習志野市 秋津",
+   "area_id": "C",
+   "lat": 35.67419,
+   "lng": 140.0139,
+   "n": 27,
+   "unit_price_median": 23.1
+  },
+  {
+   "name": "習志野市 藤崎",
+   "area_id": "C",
+   "lat": 35.68893,
+   "lng": 140.03537,
+   "n": 6,
+   "unit_price_median": 39.4
+  },
+  {
+   "name": "習志野市 袖ケ浦",
+   "area_id": "C",
+   "lat": 35.6772,
+   "lng": 140.0139,
+   "n": 12,
+   "unit_price_median": 19.3
+  },
+  {
+   "name": "習志野市 谷津",
+   "area_id": "C",
+   "lat": 35.68633,
+   "lng": 140.0174,
+   "n": 61,
+   "unit_price_median": 42.9
+  },
+  {
+   "name": "習志野市 谷津町",
+   "area_id": "C",
+   "lat": 35.67973,
+   "lng": 140.01648,
+   "n": 5,
+   "unit_price_median": 41.5
+  },
+  {
+   "name": "習志野市 香澄",
+   "area_id": "C",
+   "lat": 35.66882,
+   "lng": 140.02268,
+   "n": 6,
+   "unit_price_median": 24.3
+  },
+  {
+   "name": "船橋市 三山",
+   "area_id": "C",
+   "lat": 35.6951,
+   "lng": 140.04506,
+   "n": 8,
+   "unit_price_median": 29.3
+  },
+  {
+   "name": "船橋市 上山町",
+   "area_id": "B",
+   "lat": 35.7285,
+   "lng": 139.96878,
+   "n": 6,
+   "unit_price_median": 43.8
+  },
+  {
+   "name": "船橋市 中野木",
+   "area_id": "C",
+   "lat": 35.7026,
+   "lng": 140.0132,
+   "n": 9,
+   "unit_price_median": 31.2
+  },
+  {
+   "name": "船橋市 二子町",
+   "area_id": "B",
+   "lat": 35.70986,
+   "lng": 139.94818,
+   "n": 13,
+   "unit_price_median": 46.2
+  },
+  {
+   "name": "船橋市 二宮",
+   "area_id": "C",
+   "lat": 35.70821,
+   "lng": 140.02753,
+   "n": 6,
+   "unit_price_median": 27.5
+  },
+  {
+   "name": "船橋市 前原東",
+   "area_id": "C",
+   "lat": 35.69194,
+   "lng": 140.02618,
+   "n": 12,
+   "unit_price_median": 48.6
+  },
+  {
+   "name": "船橋市 前原西",
+   "area_id": "C",
+   "lat": 35.69535,
+   "lng": 140.01238,
+   "n": 42,
+   "unit_price_median": 49.6
+  },
+  {
+   "name": "船橋市 北本町",
+   "area_id": "B",
+   "lat": 35.71037,
+   "lng": 139.98204,
+   "n": 46,
+   "unit_price_median": 48.8
+  },
+  {
+   "name": "船橋市 南三咲",
+   "area_id": "D",
+   "lat": 35.73348,
+   "lng": 140.02269,
+   "n": 7,
+   "unit_price_median": 17.8
+  },
+  {
+   "name": "船橋市 印内",
+   "area_id": "B",
+   "lat": 35.71423,
+   "lng": 139.95989,
+   "n": 10,
+   "unit_price_median": 40.3
+  },
+  {
+   "name": "船橋市 夏見",
+   "area_id": "B",
+   "lat": 35.70792,
+   "lng": 139.98927,
+   "n": 27,
+   "unit_price_median": 40.0
+  },
+  {
+   "name": "船橋市 夏見台",
+   "area_id": "D",
+   "lat": 35.71837,
+   "lng": 139.99252,
+   "n": 25,
+   "unit_price_median": 14.7
+  },
+  {
+   "name": "船橋市 宮本",
+   "area_id": "B",
+   "lat": 35.69872,
+   "lng": 139.99199,
+   "n": 25,
+   "unit_price_median": 45.0
+  },
+  {
+   "name": "船橋市 小室町",
+   "area_id": "D",
+   "lat": 35.79073,
+   "lng": 140.07529,
+   "n": 8,
+   "unit_price_median": 13.7
+  },
+  {
+   "name": "船橋市 山手",
+   "area_id": "B",
+   "lat": 35.71314,
+   "lng": 139.97722,
+   "n": 15,
+   "unit_price_median": 38.7
+  },
+  {
+   "name": "船橋市 山野町",
+   "area_id": "B",
+   "lat": 35.70445,
+   "lng": 139.96257,
+   "n": 10,
+   "unit_price_median": 67.4
+  },
+  {
+   "name": "船橋市 市場",
+   "area_id": "B",
+   "lat": 35.70348,
+   "lng": 139.99289,
+   "n": 11,
+   "unit_price_median": 36.0
+  },
+  {
+   "name": "船橋市 旭町",
+   "area_id": "D",
+   "lat": 35.73129,
+   "lng": 139.98485,
+   "n": 6,
+   "unit_price_median": 27.2
+  },
+  {
+   "name": "船橋市 本中山",
+   "area_id": "B",
+   "lat": 35.71637,
+   "lng": 139.94504,
+   "n": 25,
+   "unit_price_median": 41.2
+  },
+  {
+   "name": "船橋市 本町",
+   "area_id": "B",
+   "lat": 35.70004,
+   "lng": 139.98348,
+   "n": 47,
+   "unit_price_median": 72.9
+  },
+  {
+   "name": "船橋市 本郷町",
+   "area_id": "B",
+   "lat": 35.70791,
+   "lng": 139.95209,
+   "n": 16,
+   "unit_price_median": 55.0
+  },
+  {
+   "name": "船橋市 東中山",
+   "area_id": "B",
+   "lat": 35.7128,
+   "lng": 139.95024,
+   "n": 8,
+   "unit_price_median": 47.0
+  },
+  {
+   "name": "船橋市 浜町",
+   "area_id": "B",
+   "lat": 35.69016,
+   "lng": 139.99005,
+   "n": 24,
+   "unit_price_median": 58.7
+  },
+  {
+   "name": "船橋市 海神",
+   "area_id": "B",
+   "lat": 35.70018,
+   "lng": 139.97853,
+   "n": 15,
+   "unit_price_median": 54.3
+  },
+  {
+   "name": "船橋市 海神町",
+   "area_id": "B",
+   "lat": 35.69896,
+   "lng": 139.97376,
+   "n": 18,
+   "unit_price_median": 32.2
+  },
+  {
+   "name": "船橋市 海神町南",
+   "area_id": "B",
+   "lat": 35.70071,
+   "lng": 139.96698,
+   "n": 24,
+   "unit_price_median": 44.2
+  },
+  {
+   "name": "船橋市 湊町",
+   "area_id": "B",
+   "lat": 35.69291,
+   "lng": 139.98601,
+   "n": 18,
+   "unit_price_median": 55.0
+  },
+  {
+   "name": "船橋市 田喜野井",
+   "area_id": "C",
+   "lat": 35.69776,
+   "lng": 140.03928,
+   "n": 9,
+   "unit_price_median": 21.5
+  },
+  {
+   "name": "船橋市 緑台",
+   "area_id": "D",
+   "lat": 35.72776,
+   "lng": 140.01761,
+   "n": 17,
+   "unit_price_median": 11.0
+  },
+  {
+   "name": "船橋市 習志野台",
+   "area_id": "C",
+   "lat": 35.72591,
+   "lng": 140.03839,
+   "n": 70,
+   "unit_price_median": 33.1
+  },
+  {
+   "name": "船橋市 芝山",
+   "area_id": "D",
+   "lat": 35.71528,
+   "lng": 140.01759,
+   "n": 8,
+   "unit_price_median": 18.9
+  },
+  {
+   "name": "船橋市 若松",
+   "area_id": "B",
+   "lat": 35.6845,
+   "lng": 139.99686,
+   "n": 10,
+   "unit_price_median": 40.0
+  },
+  {
+   "name": "船橋市 薬円台",
+   "area_id": "C",
+   "lat": 35.70828,
+   "lng": 140.041,
+   "n": 14,
+   "unit_price_median": 29.3
+  },
+  {
+   "name": "船橋市 藤原",
+   "area_id": "B",
+   "lat": 35.73135,
+   "lng": 139.9639,
+   "n": 26,
+   "unit_price_median": 28.7
+  },
+  {
+   "name": "船橋市 行田",
+   "area_id": "B",
+   "lat": 35.72093,
+   "lng": 139.97884,
+   "n": 23,
+   "unit_price_median": 43.1
+  },
+  {
+   "name": "船橋市 西習志野",
+   "area_id": "C",
+   "lat": 35.72382,
+   "lng": 140.03299,
+   "n": 6,
+   "unit_price_median": 26.7
+  },
+  {
+   "name": "船橋市 西船",
+   "area_id": "B",
+   "lat": 35.7072,
+   "lng": 139.96545,
+   "n": 29,
+   "unit_price_median": 47.1
+  },
+  {
+   "name": "船橋市 金杉台",
+   "area_id": "D",
+   "lat": 35.73623,
+   "lng": 140.01051,
+   "n": 20,
+   "unit_price_median": 6.8
+  },
+  {
+   "name": "船橋市 飯山満町",
+   "area_id": "C",
+   "lat": 35.71277,
+   "lng": 140.01086,
+   "n": 30,
+   "unit_price_median": 28.5
+  },
+  {
+   "name": "船橋市 高根台",
+   "area_id": "C",
+   "lat": 35.73144,
+   "lng": 140.03023,
+   "n": 30,
+   "unit_price_median": 44.2
+  }
+ ]
+}

@@ -5,12 +5,20 @@
  * （外部通信は MapLibre のCDNと背景地図タイルのみ）。
  * data.json は scripts/build_demo_data.js が本体と同じ取得条件・集計ロジックで生成する。
  * areas.json（エリア表示・試作）は scripts/analysis/build_demo_areas.py が生成する。
- * 描画部分（ポップアップ・マーカー・凡例・地図設定）は js/app.js と同じ内容。
+ * districts.geojson（地区の境界）は scripts/build_demo_boundaries.py が生成する。
+ * ポップアップ・凡例・地図設定は js/app.js と同じ内容。地区の描き方だけが異なり、
+ * デモ版は代表点のピンではなく町丁目の境界ポリゴンを塗る（境界を読めなかったときはピンに戻す）。
  */
 
 const TSUDANUMA = { lng: 140.0197, lat: 35.6913 };
 const DATA_URL = './data.json';
 const AREAS_URL = './areas.json';
+const DISTRICTS_URL = './districts.geojson';
+
+// 境界ポリゴンの塗り。取引データが無い（または集計対象外の）地区は灰色でごく薄く塗り、
+// 「データが無い」ことと「地区が無い」ことを区別できるようにする。
+const NO_DATA_COLOR = '#8a8a8a';
+const FILL_OPACITY = { data: 0.55, dimmed: 0.15, noData: 0.12 };
 
 // エリアの色。エリアIDに固定で割り当てる（エリア数が変わっても同じIDは同じ色）。
 // 色覚特性によっては緑と赤が近く見えるため、マーカーと凡例にはエリア記号の文字も必ず出す。
@@ -101,6 +109,62 @@ function buildPopupHtml(p) {
   `;
 }
 
+// 取引データが無い地区をクリックしたときのポップアップ
+function buildNoDataPopupHtml(name, reason) {
+  return `
+    <div class="popup-content">
+      <h3>${esc(name)}</h3>
+      <p class="popup-nodata">${esc(reason)}</p>
+    </div>
+  `;
+}
+
+// 地区の境界ポリゴン（塗り・境界線・選択中の強調線）を地図に追加する
+function addBoundaryLayers(map, geojson) {
+  map.addSource('districts', {
+    type: 'geojson',
+    data: geojson,
+    // 出典の書き方は e-Stat の利用規約（加工して利用する場合）に従う
+    attribution: '境界: <a href="https://www.e-stat.go.jp/gis" target="_blank" rel="noopener">「政府統計の総合窓口(e-Stat)」</a>国勢調査（2020年）境界データを加工して作成',
+  });
+  map.addLayer({
+    id: 'district-fill',
+    type: 'fill',
+    source: 'districts',
+    paint: { 'fill-color': NO_DATA_COLOR, 'fill-opacity': FILL_OPACITY.noData },
+  });
+  map.addLayer({
+    id: 'district-line',
+    type: 'line',
+    source: 'districts',
+    paint: { 'line-color': '#3c3c3c', 'line-opacity': 0.55, 'line-width': 0.8 },
+  });
+  map.addLayer({
+    id: 'district-picked',
+    type: 'line',
+    source: 'districts',
+    filter: ['==', ['get', 'id'], ''],
+    paint: { 'line-color': '#111', 'line-width': 3 },
+  });
+}
+
+// 地区ID→色 の対応で境界ポリゴンを塗り直す。対応に無い地区は「データなし」の灰色になる。
+// isDimmed(id) が真の地区は薄くする（エリア選択中に、選んでいないエリアを引っ込めるため）。
+function paintBoundaries(map, colorById, isDimmed = () => false) {
+  const ids = Object.keys(colorById);
+  if (ids.length === 0) {
+    map.setPaintProperty('district-fill', 'fill-color', NO_DATA_COLOR);
+    map.setPaintProperty('district-fill', 'fill-opacity', FILL_OPACITY.noData);
+    return;
+  }
+  map.setPaintProperty('district-fill', 'fill-color',
+    ['match', ['get', 'id'], ...ids.flatMap((id) => [id, colorById[id]]), NO_DATA_COLOR]);
+  map.setPaintProperty('district-fill', 'fill-opacity',
+    ['match', ['get', 'id'],
+      ...ids.flatMap((id) => [id, isDimmed(id) ? FILL_OPACITY.dimmed : FILL_OPACITY.data]),
+      FILL_OPACITY.noData]);
+}
+
 // マーカーを地図上に描画し、あとで消せるようマーカー配列を返す
 function plotMarkers(map, properties, colorFor) {
   return properties.map((p) => {
@@ -119,7 +183,7 @@ function plotMarkers(map, properties, colorFor) {
 }
 
 // 凡例を動的生成（実データの4分位に基づく）
-function buildLegend(breakpoints, colors) {
+function buildLegend(breakpoints, colors, showNoData) {
   const items = [
     { color: colors[0], label: `〜${breakpoints[0].toLocaleString()}万円` },
     { color: colors[1], label: `${breakpoints[0].toLocaleString()}〜${breakpoints[1].toLocaleString()}万円` },
@@ -134,6 +198,14 @@ function buildLegend(breakpoints, colors) {
     row.innerHTML = `<span class="legend-dot" style="background:${color}"></span>${label}`;
     container.appendChild(row);
   });
+  if (showNoData) container.appendChild(buildNoDataLegendRow('取引データなし'));
+}
+
+function buildNoDataLegendRow(label) {
+  const row = document.createElement('div');
+  row.className = 'legend-row';
+  row.innerHTML = `<span class="legend-dot legend-nodata"></span>${esc(label)}`;
+  return row;
 }
 
 // エントリポイント
@@ -184,6 +256,27 @@ async function main() {
       document.getElementById('fetched-date').textContent = data.fetchedDate;
       let currentMarkers = [];
       let currentType = 'all';
+      let currentMode = 'district';
+
+      // 地区の境界ポリゴン。読めなかったときは従来どおり代表点のピンで表示する。
+      let boundaries = null;
+      try {
+        const bRes = await fetch(DISTRICTS_URL);
+        if (!bRes.ok) throw new Error(`districts.geojson: HTTP ${bRes.status}`);
+        boundaries = await bRes.json();
+        addBoundaryLayers(map, boundaries);
+      } catch (err) {
+        console.error('境界データ読み込みエラー（ピン表示に切り替えます）:', err);
+        boundaries = null;
+      }
+      const boundaryById = new Map((boundaries ? boundaries.features : []).map((f) => [f.properties.id, f.properties]));
+      let districtById = new Map();       // 地区表示で今描いている地区（ID→集計値）
+      let areaDistrictById = new Map();   // エリア表示の対象地区（ID→所属エリアなど）
+      const popup = new maplibregl.Popup({ offset: 4 });
+      const setPicked = (id) => {
+        if (boundaries) map.setFilter('district-picked', ['==', ['get', 'id'], id || '']);
+      };
+      popup.on('close', () => { if (currentMode === 'district') setPicked(null); });
 
       // 種別を切り替えるたびに、集計済みデータから色分け・凡例・マーカーを作り直す
       const render = (viewKey) => {
@@ -197,8 +290,16 @@ async function main() {
           if (price < breakpoints[2]) return colors[2];
           return colors[3];
         };
-        currentMarkers = plotMarkers(map, properties, colorFor);
-        buildLegend(breakpoints, colors);
+        currentMarkers = [];
+        popup.remove();
+        if (boundaries) {
+          districtById = new Map(properties.map((p) => [p.id, p]));
+          paintBoundaries(map, Object.fromEntries(
+            properties.map((p) => [p.id, colorFor(p.trade_price_man_yen_median)])));
+        } else {
+          currentMarkers = plotMarkers(map, properties, colorFor);
+        }
+        buildLegend(breakpoints, colors, boundaries !== null);
 
         const note = skippedNoCoord > 0 ? `（座標未登録の地区 ${skippedNoCoord}件は非表示）` : '';
         document.getElementById('count').textContent = `${properties.length}地区 表示中${note}`;
@@ -238,6 +339,18 @@ async function main() {
         });
       };
 
+      // areas.json の地区名（「市名 町名」）を、境界データ・data.json と共通のID（「市名|町名」）にする
+      const districtId = (d) => d.name.replace(' ', '|');
+      // 境界ポリゴンをエリアの色で塗る。selectedAreaId を渡すと、それ以外のエリアを薄くする。
+      const paintAreas = (selectedAreaId) => {
+        if (!boundaries || !areasDoc) return;
+        paintBoundaries(
+          map,
+          Object.fromEntries(areasDoc.districts.map((d) => [districtId(d), areaStyle(d.area_id).bg])),
+          (id) => selectedAreaId !== null && areaDistrictById.get(id).area_id !== selectedAreaId,
+        );
+      };
+
       const selectArea = (areaId, district = null) => {
         const area = areasDoc.areas.find((a) => a.id === areaId);
         // 凡例から選んだときは、そのエリア全体が見える位置へ移動する
@@ -249,12 +362,16 @@ async function main() {
           el.classList.toggle('dimmed', d.area_id !== areaId);
           el.classList.toggle('picked', district !== null && d.name === district.name);
         });
+        paintAreas(areaId);
+        setPicked(district ? districtId(district) : null);
         document.querySelectorAll('.area-legend-row').forEach((row) => {
           row.setAttribute('aria-pressed', String(row.dataset.area === areaId));
         });
       };
       const clearArea = () => {
         panel.hidden = true;
+        setPicked(null);
+        if (currentMode === 'area') paintAreas(null);
         areaMarkerEls.forEach(({ el }) => el.classList.remove('dimmed', 'picked'));
         document.querySelectorAll('.area-legend-row').forEach((row) => row.setAttribute('aria-pressed', 'false'));
       };
@@ -263,6 +380,8 @@ async function main() {
       const renderAreas = () => {
         currentMarkers.forEach((m) => m.remove());
         areaMarkerEls = [];
+        popup.remove();
+        paintAreas(null);
         currentMarkers = areasDoc.districts.map((d) => {
           const st = areaStyle(d.area_id);
           const el = document.createElement('div');
@@ -276,7 +395,9 @@ async function main() {
             selectArea(d.area_id, d);
           });
           areaMarkerEls.push({ el, d });
-          return new maplibregl.Marker({ element: el }).setLngLat([d.lng, d.lat]).addTo(map);
+          // 記号は面の中の代表点に置く（境界が無いときはジオコーディングの代表点）
+          const b = boundaryById.get(districtId(d));
+          return new maplibregl.Marker({ element: el }).setLngLat(b ? b.label : [d.lng, d.lat]).addTo(map);
         });
 
         fitToDistricts(areasDoc.districts);
@@ -295,6 +416,7 @@ async function main() {
           row.addEventListener('click', () => selectArea(a.id));
           container.appendChild(row);
         });
+        if (boundaries) container.appendChild(buildNoDataLegendRow('エリア分割の対象外'));
         const s = areasDoc.verification_summary;
         legendNote.innerHTML = `<strong>${esc(areasDoc.status)}</strong><br>`
           + `対象: ${esc(areasDoc.data.type)}の取引が${areasDoc.data.min_records_per_district}件以上ある${areasDoc.data.n_districts}地区。`
@@ -308,6 +430,7 @@ async function main() {
 
       const setMode = (mode) => {
         modeButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+        currentMode = mode;
         clearArea();
         if (mode === 'area') {
           renderAreas();
@@ -320,10 +443,36 @@ async function main() {
       };
       modeButtons.forEach((b) => b.addEventListener('click', () => setMode(b.dataset.mode)));
 
+      // 境界ポリゴンのクリック: 地区表示では集計値のポップアップ、エリア表示ではそのエリアの説明を開く
+      if (boundaries) {
+        map.on('click', 'district-fill', (e) => {
+          const { id, name } = e.features[0].properties;
+          if (currentMode === 'area') {
+            const d = areaDistrictById.get(id);
+            if (d) {
+              popup.remove();
+              selectArea(d.area_id, d);
+            } else {
+              popup.setLngLat(e.lngLat).setHTML(buildNoDataPopupHtml(name,
+                `エリア分割の対象外です（${areasDoc.data.type}の取引が${areasDoc.data.min_records_per_district}件未満）。`)).addTo(map);
+            }
+            return;
+          }
+          const p = districtById.get(id);
+          popup.setLngLat(e.lngLat)
+            .setHTML(p ? buildPopupHtml(p) : buildNoDataPopupHtml(name, 'この条件に当てはまる取引データがありません。'))
+            .addTo(map);
+          setPicked(id);
+        });
+        map.on('mousemove', 'district-fill', () => { map.getCanvas().style.cursor = 'pointer'; });
+        map.on('mouseleave', 'district-fill', () => { map.getCanvas().style.cursor = ''; });
+      }
+
       try {
         const areasRes = await fetch(AREAS_URL);
         if (!areasRes.ok) throw new Error(`areas.json: HTTP ${areasRes.status}`);
         areasDoc = await areasRes.json();
+        areaDistrictById = new Map(areasDoc.districts.map((d) => [districtId(d), d]));
         areaButton.disabled = false;
       } catch (err) {
         console.error('エリアデータ読み込みエラー:', err);

@@ -235,6 +235,8 @@
       transition: opacity 0.15s;
     }
     .area-marker.dimmed { opacity: 0.3; }
+    .legend-dot.legend-nodata { background: rgba(138,138,138,0.3); border: 1px solid #8a8a8a; }
+    .popup-nodata { font-size: 0.8rem; color: #555; margin: 4px 0 0; }
     .area-marker.picked { border-color: #111; }
 
     .area-legend-row {
@@ -482,7 +484,6 @@
   <header>
     <div>
       <h1>津田沼 物件マップ <span class="demo-badge">開発中のデモ（データ取得日: <span id="fetched-date">2026-11-12</span>）</span></h1>
-      <div class="subtitle">エリアの特徴を、データに忠実な言葉で</div>
     </div>
     <div class="header-actions">
       <span id="count">読み込み中…</span>

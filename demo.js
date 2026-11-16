@@ -140,4 +140,37 @@ async function main() {
   });
 }
 
+// 「このデモについて」パネル。初回表示時だけ自動で開き、以降はヘッダーのボタンで再表示する。
+function setupAbout() {
+  const overlay = document.getElementById('about-overlay');
+  const panel = document.getElementById('about-panel');
+  const openBtn = document.getElementById('about-open');
+  const SEEN_KEY = 'property-demo:about-seen';
+
+  const open = () => {
+    overlay.hidden = false;
+    panel.focus();
+  };
+  const close = () => {
+    overlay.hidden = true;
+    // localStorage が使えない環境（プライベートブラウズ等）では毎回開くだけで、動作は妨げない
+    try { localStorage.setItem(SEEN_KEY, '1'); } catch (e) { /* 無視 */ }
+    openBtn.focus();
+  };
+
+  openBtn.addEventListener('click', open);
+  document.getElementById('about-close').addEventListener('click', close);
+  document.getElementById('about-ok').addEventListener('click', close);
+  // 背景（パネルの外側）のクリックでも閉じる
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) close();
+  });
+
+  let seen = false;
+  try { seen = localStorage.getItem(SEEN_KEY) === '1'; } catch (e) { /* 無視 */ }
+  if (!seen) open();
+}
+
+setupAbout();
 main();

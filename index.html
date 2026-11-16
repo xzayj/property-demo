@@ -28,8 +28,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px 12px;
       flex-shrink: 0;
     }
+    header .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+    #about-open {
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #1a237e;
+      background: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 4px 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #about-open:hover { background: #e8eaf6; }
     header h1 { font-size: 1rem; font-weight: bold; }
     header .demo-badge {
       display: inline-block;
@@ -168,6 +189,89 @@
       z-index: 11;
     }
 
+    /* 「このデモについて」オーバーレイ */
+    #about-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    #about-overlay[hidden] { display: none; }
+    #about-panel {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      max-height: 100%;
+      overflow-y: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+      padding: 20px 20px 18px;
+      color: #222;
+      line-height: 1.65;
+      outline: none;
+    }
+    #about-panel h2 {
+      font-size: 1.05rem;
+      color: #1a237e;
+      padding-right: 36px;
+      margin-bottom: 8px;
+    }
+    #about-panel .about-lead {
+      font-size: 0.95rem;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+    #about-panel h3 {
+      font-size: 0.82rem;
+      color: #1a237e;
+      margin: 12px 0 2px;
+    }
+    #about-panel p,
+    #about-panel li { font-size: 0.86rem; }
+    #about-panel ul,
+    #about-panel ol { padding-left: 1.4em; }
+    #about-panel .about-finding {
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: #fff8e1;
+      border-left: 4px solid #ffca28;
+      border-radius: 4px;
+    }
+    #about-panel .about-finding small { color: #666; }
+    #about-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      background: #eee;
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    #about-close:hover { background: #ddd; }
+    #about-ok {
+      display: block;
+      margin: 16px auto 0;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+      background: #1a237e;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 28px;
+      cursor: pointer;
+    }
+
     /* データ出典（不動産情報ライブラリAPI利用規約 第7条に基づく必須表示） */
     #data-note {
       position: absolute;
@@ -189,10 +293,42 @@
   <header>
     <div>
       <h1>津田沼 物件マップ <span class="demo-badge">開発中のデモ（データ取得日: <span id="fetched-date">2026-11-12</span>）</span></h1>
-      <div class="subtitle">新入生向け 取引価格の相場×利便性で探す</div>
+      <div class="subtitle">エリアの特徴を、データに忠実な言葉で</div>
     </div>
-    <span id="count">読み込み中…</span>
+    <div class="header-actions">
+      <span id="count">読み込み中…</span>
+      <button type="button" id="about-open">このデモについて</button>
+    </div>
   </header>
+
+  <div id="about-overlay" hidden>
+    <div id="about-panel" role="dialog" aria-modal="true" aria-labelledby="about-title" tabindex="-1">
+      <button type="button" id="about-close" aria-label="閉じる">×</button>
+      <h2 id="about-title">このデモについて</h2>
+      <p class="about-lead">不動産取引データをエリアに自動分割し、各エリアの特徴を「データに忠実な言葉」で説明する仕組みの研究です。</p>
+
+      <h3>なぜ必要か</h3>
+      <p>取引価格のデータは公開されていますが、土地勘のない人が相場観をつかむ手段がありません。数値が並んだ地図は、そのままでは読めないからです。</p>
+
+      <h3>今このデモでできること</h3>
+      <ul>
+        <li>110地区の取引価格（中央値）を色分けして表示</li>
+        <li>地区をクリックすると詳細を表示</li>
+        <li>取引の種別（すべて／中古マンション等）を切り替え</li>
+      </ul>
+
+      <h3>開発中</h3>
+      <ol>
+        <li>似た地区を自動でエリアにまとめる</li>
+        <li>エリアの特徴を文章で説明する</li>
+        <li>その文章がデータと合っているかを自動検証する</li>
+      </ol>
+
+      <p class="about-finding"><strong>現時点でわかったこと：</strong>津田沼駅2km圏内でも、価格上位の地区群と下位の地区群で㎡単価に約2.3倍の差があり、価格のばらつきの約半分は「どの地区か」で説明できます。<small>（中古マンション取引の分析）</small></p>
+
+      <button type="button" id="about-ok">地図を見る</button>
+    </div>
+  </div>
 
   <main>
     <div id="map"></div>
